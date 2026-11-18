@@ -1,7 +1,7 @@
-// service-worker.js — gerado pelo Mini SK em 17/11/2026, 14:01:35
+// service-worker.js — gerado pelo Mini SK em 18/11/2026, 15:57:29
 // Não precisa mexer: ele guarda sozinho o que o app usa.
 const PREFIXO = 'sk-minisk-20-';
-const CACHE = PREFIXO + 'mwkxw5di';
+const CACHE = PREFIXO + 'mwmhh1uv';
 // Lista feita automaticamente (para funcionar sem internet logo após instalar)
 const GUARDAR = [
   "./",
@@ -41,6 +41,7 @@ const GUARDAR = [
   "./js/80-ai.js",
   "./js/80b-web.js",
   "./js/81-gasto.js",
+  "./js/81b-pronto.js",
   "./js/83-voz.js",
   "./js/84-ponte.js",
   "./js/85-checkpoints.js",
@@ -97,9 +98,11 @@ const GUARDAR = [
   "./js/lib/ponte-termux.cjs.txt",
   "./js/lib/receita-core.js",
   "./js/lib/selar.js",
+  "./js/tema.js",
   "./LEIA-ME.md",
   "./manifest.json",
   "./PLANO.md",
+  "./README.md",
   "./RECEITA.md",
   "./sw.js"
 ];

@@ -1,26 +1,25 @@
 # 📋 Plano do projeto: minisk-20
 
-_Gerado em 17/11/2026, 13:56:40 — sem IA, lendo os arquivos._
+_Gerado em 18/11/2026, 15:54:25 — sem IA, lendo os arquivos._
 
 ## 📊 Visão geral
 | Item | Valor |
 |---|---|
-| Arquivos | 77 |
-| Linhas | 16.296 |
+| Arquivos | 80 |
+| Linhas | 16.611 |
 | Telas/páginas | 2 |
 | Rotas do backend | 3 |
 | Chamadas do app | 1 |
 | Tabelas do banco | 0 |
 | Variáveis de ambiente | 10 |
 
-**Linguagens:** JavaScript (69), HTML (2), Imagem (2), CSS (1), Outros (1), Markdown (1), JSON (1)
+**Linguagens:** JavaScript (71), HTML (2), Imagem (2), Markdown (2), CSS (1), Outros (1), JSON (1)
 
 ## 💡 O que fazer (em ordem)
 1. 🧹 Tirar a Replit de 20 arquivo(s) (🏗️ Preparar → Fazer tudo)
 2. 🖥️ O projeto tem backend próprio: para funcionar fora da Replit ele precisa ficar ligado num servidor (Render, Railway, Vercel) ou virar funções
 3. 🔐 Criar um .env.example com: BASE_PATH, DADOS_EM, FAXINA_CODIGO, FAXINA_PORTA, GITHUB_STEP_SUMMARY, LOCALAPPDATA, PONTE_BASE, PONTE_CODIGO, PONTE_PORTA, TESTE_SAIR (os valores você coloca no servidor, nunca no código)
-4. 📝 Criar um README.md explicando como rodar
-5. 🚫 Criar .gitignore (não mandar node_modules ao GitHub)
+4. 🚫 Criar .gitignore (não mandar node_modules ao GitHub)
 
 ## 🚀 Por onde começa
 - `index.html`
@@ -194,6 +193,7 @@ _Só os nomes. Os valores (chaves, senhas) nunca vão no código nem no GitHub._
 │  ├─ 80-ai.js
 │  ├─ 80b-web.js
 │  ├─ 81-gasto.js
+│  ├─ 81b-pronto.js
 │  ├─ 83-voz.js
 │  ├─ 84-ponte.js
 │  ├─ 85-checkpoints.js
@@ -233,9 +233,11 @@ _Só os nomes. Os valores (chaves, senhas) nunca vão no código nem no GitHub._
 │  ├─ 98-api.js
 │  ├─ 98b-rotas.js
 │  ├─ 98c-montar.js
-│  └─ 99-app.js
+│  ├─ 99-app.js
+│  └─ tema.js
 ├─ index.html
 ├─ LEIA-ME.md
 ├─ manifest.json
+├─ README.md
 └─ sw.js
 ```

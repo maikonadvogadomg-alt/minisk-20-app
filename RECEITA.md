@@ -1,11 +1,11 @@
 # 🧬 Receita para recriar: Mini SK
 
-_Gerada sem IA, lendo 78 arquivo(s). Serve para remontar este app como HTML modular — com qualquer IA, um arquivo por vez._
+_Gerada sem IA, lendo 81 arquivo(s). Serve para remontar este app como HTML modular — com qualquer IA, um arquivo por vez._
 
 ## 1. O que é
 
 - **Nome:** Mini SK
-- **Partes de código:** 68 (2 tela, 64 logica, 1 servidor, 0 dados, 1 estilo)
+- **Partes de código:** 70 (2 tela, 66 logica, 1 servidor, 0 dados, 1 estilo)
 - **Tem servidor (rotas /api):** sim — veja o passo do servidor
 - **Peças de fora (bibliotecas):**  + JSON.stringify(principal) + ,  + q + u + q + , child_process, crypto, electron, fs, http, msedge-tts, net, os, path, react, react-dom, url, ws
 
@@ -27,18 +27,19 @@ js/50-search.js       ← Mini SK — 70-search.js Buscar (e trocar) em todos os
 js/55-ai.js           ← Mini SK — 80-ai.js IA para ajudar a escrever código. - Chaves: cole qu (era js/80-ai.js)
 js/60-80b-web.js      ← 🌐 Internet para a IA do Mini SK: pesquisar (DuckDuckGo, grátis, sem c (era js/80b-web.js)
 js/65-gasto.js        ← Mini SK — 81-gasto.js 💰 Quanto a IA está gastando. - Depois de cada r (era js/81-gasto.js)
-js/70-voz.js          ← Mini SK — 83-voz.js 🗣️ Voz e modo conversa (igual ao jurídico): - Voz (era js/83-voz.js)
-js/75-ponte.js        ← Mini SK — 84-ponte.js 🔗 Ponte com os outros apps (cada um continua se (era js/84-ponte.js)
-js/80-checkpoints.js  ← Mini SK — 85-checkpoints.js Pontos de volta. Uma "foto" de todos os ar (era js/85-checkpoints.js)
-js/85-terminal.js     ← Mini SK — 86-terminal.js ⌨️ Terminal leve, ligado à ÁRVORE do projeto. (era js/86-terminal.js)
-js/90-86b-node.js     ← logica (era js/86b-node.js)
-js/91-86c-termux.js   ← logica (era js/86c-termux.js)
-js/92-86e-atalhos.js  ← Mini SK — 86e-atalhos.js ⚡ Comandos prontos para os terminais (⚡ Node  (era js/86e-atalhos.js)
-js/93-86f-pasta-viva.js← Mini SK — 86f-pasta-viva.js   (SÓ no Mini SK para PC) 📁 PASTA VIVA: i (era js/86f-pasta-viva.js)
-js/94-86g-largura.js  ← Mini SK — 86g-largura.js ↔ Arraste a borda esquerda do painel (🤖 IA,  (era js/86g-largura.js)
-js/95-86g-saude-pc.js ← 🩺 Saúde do computador (só no Mini SK para PC). Um toque: mostra disco (era js/86g-saude-pc.js)
-js/96-86h-navegador.js← 🌐 Navegador de verdade — abre QUALQUER site sem sair do Mini SK (YouT (era js/86h-navegador.js)
-js/97-86h-node-extra.js← Mini SK — 86h-node-extra.js Botões a mais no ⚡ Node (peça separada: se (era js/86h-node-extra.js)
+js/70-81b-pronto.js   ← Mini SK — 81b-pronto.js · 🔔 AVISO DE "PRONTO" (18/11) A IA demorou (O (era js/81b-pronto.js)
+js/75-voz.js          ← Mini SK — 83-voz.js 🗣️ Voz e modo conversa (igual ao jurídico): - Voz (era js/83-voz.js)
+js/80-ponte.js        ← Mini SK — 84-ponte.js 🔗 Ponte com os outros apps (cada um continua se (era js/84-ponte.js)
+js/85-checkpoints.js  ← Mini SK — 85-checkpoints.js Pontos de volta. Uma "foto" de todos os ar (era js/85-checkpoints.js)
+js/90-terminal.js     ← Mini SK — 86-terminal.js ⌨️ Terminal leve, ligado à ÁRVORE do projeto. (era js/86-terminal.js)
+js/91-86b-node.js     ← logica (era js/86b-node.js)
+js/92-86c-termux.js   ← logica (era js/86c-termux.js)
+js/93-86e-atalhos.js  ← Mini SK — 86e-atalhos.js ⚡ Comandos prontos para os terminais (⚡ Node  (era js/86e-atalhos.js)
+js/94-86f-pasta-viva.js← Mini SK — 86f-pasta-viva.js   (SÓ no Mini SK para PC) 📁 PASTA VIVA: i (era js/86f-pasta-viva.js)
+js/95-86g-largura.js  ← Mini SK — 86g-largura.js ↔ Arraste a borda esquerda do painel (🤖 IA,  (era js/86g-largura.js)
+js/96-86g-saude-pc.js ← 🩺 Saúde do computador (só no Mini SK para PC). Um toque: mostra disco (era js/86g-saude-pc.js)
+js/97-86h-navegador.js← 🌐 Navegador de verdade — abre QUALQUER site sem sair do Mini SK (YouT (era js/86h-navegador.js)
+js/98-86h-node-extra.js← Mini SK — 86h-node-extra.js Botões a mais no ⚡ Node (peça separada: se (era js/86h-node-extra.js)
 js/98-banco.js        ← 🗄 Banco de Dados (Neon) dentro do Mini SK (17/11) Abre a mesma ferram (era js/87-banco.js)
 js/98-links.js        ← Mini SK — 87-links.js 🔗 Meus Links: guarda os endereços dos seus PWAs (era js/87-links.js)
 js/98-inventario.js   ← logica (era js/88-inventario.js)
@@ -77,6 +78,7 @@ js/98-mensagens.js    ← Picotador — 30-mensagens.js: escolher a conversa, ma
 js/98-plano-core.js   ← logica (era js/lib/plano-core.js)
 js/98-receita-core.js ← receita-core.js — 🧬 Receita para recriar um projeto (sem IA). Lê os a (era js/lib/receita-core.js)
 js/98-selar.js        ← Mini SK — js/lib/selar.js "Tranca" um segredo do jeito que o GitHub ex (era js/lib/selar.js)
+js/98-tema.js         ← 🎨 TEMA — trocar as cores do app (18/11). O mesmo arquivo em todos os  (era js/tema.js)
 js/98-98b-rotas.js    ← Mini SK — 98b-rotas.js  ·  🧭 Mapa de Rotas (tela × servidor × manual) (era js/98b-rotas.js)
 js/98-banco-neon.js   ← Banco de Dados (Neon) — 🗄 Banco de Dados (Neon) (era ferramentas/banco-neon.html)
 js/98-inicio.js       ← Mini SK (era index.html)
@@ -100,61 +102,63 @@ js/99-app.js          ← o último: monta a tela com o que embarcou
 | 11 | `js/80-ai.js` | `js/55-ai.js` | logica | Mini SK — 80-ai.js IA para ajudar a escrever código. - Chaves: cole qualquer chave, o prov | — |
 | 12 | `js/80b-web.js` | `js/60-80b-web.js` | logica | 🌐 Internet para a IA do Mini SK: pesquisar (DuckDuckGo, grátis, sem chave) e ler links. O | — |
 | 13 | `js/81-gasto.js` | `js/65-gasto.js` | logica | Mini SK — 81-gasto.js 💰 Quanto a IA está gastando. - Depois de cada resposta: tokens de e | — |
-| 14 | `js/83-voz.js` | `js/70-voz.js` | logica | Mini SK — 83-voz.js 🗣️ Voz e modo conversa (igual ao jurídico): - Voz: Francisca (neural) | — |
-| 15 | `js/84-ponte.js` | `js/75-ponte.js` | logica | Mini SK — 84-ponte.js 🔗 Ponte com os outros apps (cada um continua separado, sem bagunça) | — |
-| 16 | `js/85-checkpoints.js` | `js/80-checkpoints.js` | logica | Mini SK — 85-checkpoints.js Pontos de volta. Uma "foto" de todos os arquivos do projeto. - | — |
-| 17 | `js/86-terminal.js` | `js/85-terminal.js` | logica | Mini SK — 86-terminal.js ⌨️ Terminal leve, ligado à ÁRVORE do projeto. Funciona no celular | — |
-| 18 | `js/86b-node.js` | `js/90-86b-node.js` | logica | ehSite, lacreLigado, registrarSW, ligarLacre | — |
-| 19 | `js/86c-termux.js` | `js/91-86c-termux.js` | logica | telaCheia, sair, tecla, volta | — |
-| 20 | `js/86e-atalhos.js` | `js/92-86e-atalhos.js` | logica | Mini SK — 86e-atalhos.js ⚡ Comandos prontos para os terminais (⚡ Node e 📱 Termux): um toq | — |
-| 21 | `js/86f-pasta-viva.js` | `js/93-86f-pasta-viva.js` | logica | Mini SK — 86f-pasta-viva.js   (SÓ no Mini SK para PC) 📁 PASTA VIVA: igual ao VS Code. Cad | — |
-| 22 | `js/86g-largura.js` | `js/94-86g-largura.js` | logica | Mini SK — 86g-largura.js ↔ Arraste a borda esquerda do painel (🤖 IA, 💻 Terminal…) para d | — |
-| 23 | `js/86g-saude-pc.js` | `js/95-86g-saude-pc.js` | logica | 🩺 Saúde do computador (só no Mini SK para PC). Um toque: mostra discos, memória, quem est | — |
-| 24 | `js/86h-navegador.js` | `js/96-86h-navegador.js` | logica | 🌐 Navegador de verdade — abre QUALQUER site sem sair do Mini SK (YouTube, GitHub, npm, Ne | — |
-| 25 | `js/86h-node-extra.js` | `js/97-86h-node-extra.js` | logica | Mini SK — 86h-node-extra.js Botões a mais no ⚡ Node (peça separada: se der problema, o Nod | — |
-| 26 | `js/87-banco.js` | `js/98-banco.js` | logica | 🗄 Banco de Dados (Neon) dentro do Mini SK (17/11) Abre a mesma ferramenta do jurídico e d | — |
-| 27 | `js/87-links.js` | `js/98-links.js` | logica | Mini SK — 87-links.js 🔗 Meus Links: guarda os endereços dos seus PWAs e sites num lugar s | — |
-| 28 | `js/88-inventario.js` | `js/98-inventario.js` | logica | texto, limpaTag, familia, analisar | — |
-| 29 | `js/89-config.js` | `js/98-config.js` | logica | Mini SK — 89-config.js ⚙️ Configuração: 🔑 Cofre de chaves (IA, GitHub e "Minhas chaves"). | — |
-| 30 | `js/89b-cacador.js` | `js/98-89b-cacador.js` | logica | Mini SK — 89b-cacador.js 🐞 CAÇADOR DE ERROS (para qualquer app que você rodar aqui) Junta | — |
-| 31 | `js/90-github.js` | `js/98-github.js` | logica | Mini SK — 90-github.js Repositório no GitHub, direto do navegador (sem servidor, sem Repli | — |
-| 32 | `js/91-acoes.js` | `js/98-acoes.js` | logica | Mini SK — 91-acoes.js ⚙️ Execuções no GitHub (Actions) — dentro do painel 🐙 GitHub. Antes | — |
-| 33 | `js/91b-publicar.js` | `js/98-91b-publicar.js` | logica | Mini SK — 91b-publicar.js 🚀 PUBLICAR — um botão para cada coisa (igual ao APK Builder): ? | — |
-| 34 | `js/91c-projetos-gh.js` | `js/98-91c-projetos-gh.js` | logica | Mini SK — 91c-projetos-gh.js 🐙 PROJETOS NO GITHUB — igual ao SK da Replit: - Com o token  | — |
-| 35 | `js/92-playground.js` | `js/98-playground.js` | logica | Mini SK — 92-playground.js ▶️ Playground isolado, que abre ao lado (não é a primeira tela) | — |
-| 36 | `js/92c-importar.js` | `js/98-92c-importar.js` | logica | Mini SK — 92c-importar.js 📥 IMPORTAR TUDO / ✂️ PICOTAR — o Picotador dentro do Mini SK. A | — |
-| 37 | `js/93-conversa.js` | `js/98-conversa.js` | logica | Mini SK — 93-conversa.js 🧩 Desembaralhar conversa: lê uma conversa copiada do app de IA ( | — |
-| 38 | `js/94-fatiador.js` | `js/98-fatiador.js` | logica | lineStates, nameOfJs, splitByStarts, pullComments | — |
-| 39 | `js/95-pwa.js` | `js/98-pwa.js` | logica | gradFill, shapePath, hexA, content | favicon.ico, icon.svg, apple-touch-icon.png |
-| 40 | `js/96-apk.js` | `js/98-apk.js` | logica | wfNome, receitas, MainActivity, Voz | package.json |
-| 41 | `js/96b-eas.js` | `js/98-96b-eas.js` | logica | versaoBase, majorExpo, lerJson, conferir | app.json |
-| 42 | `js/96c-preparar.js` | `js/98-96c-preparar.js` | logica | lerJSON, raizPkg, permissoes, analisar | — |
-| 43 | `js/96d-exe-minisk.js` | `js/98-96d-exe-minisk.js` | logica | Mini SK — 96d-exe-minisk.js Quando o projeto aberto é o PRÓPRIO Mini SK, o .exe sai como o | ponte.cjs, terminal.cjs, saude.cjs, voz.cjs |
-| 44 | `js/96e-exe-python.js` | `js/98-96e-exe-python.js` | logica | Mini SK — 96e-exe-python.js 🪶 Programa .exe LEVE (Python, um arquivo só) — igual ao do ju | — |
-| 45 | `js/97-analise.js` | `js/98-analise.js` | logica | explain, scriptHelp, parseCatalog, analyze | — |
-| 46 | `js/97b-cacabug.js` | `js/98-97b-cacabug.js` | logica | Mini SK — 97b-cacabug.js 🔬 Caça-Bug — DENTRO do Mini SK (não é um app separado): - 🔍 lê  | — |
-| 47 | `js/97c-modularizar.js` | `js/98-97c-modularizar.js` | logica | dirDe, normalizar, juntarCaminho, relativo | ,  |
-| 48 | `js/97d-faxina.js` | `js/98-97d-faxina.js` | logica | Mini SK — 97d-faxina.js  ·  🧹 Faxina do projeto (antes de importar) Para projetos grandes | — |
-| 49 | `js/97f-faxina-pc.js` | `js/98-97f-faxina-pc.js` | logica | chamar, diagnosticar, somaLixo, somaNM | — |
-| 50 | `js/98-api.js` | `js/98-api.js` | logica | Mini SK — 98-api.js 🧪 Testador da API do próprio projeto (o servidor rodando no seu PC, e | — |
-| 51 | `js/98c-montar.js` | `js/98-98c-montar.js` | logica | slug, noFimDoBody, achar, receitaAuto | — |
-| 52 | `js/99-app.js` | css/app.css | logica | Mini SK — 99-app.js Junta tudo: barra de cima, gavetas (Arquivos à esquerda; IA, Busca, Ch | estilo.css, app.js |
-| 53 | `js/lib/cofre-arquivo.js` | `js/98-cofre-arquivo.js` | logica | 🔐 Arquivo de chaves do Maikon — o MESMO formato no Mini SK, no Meu Chat e no que vier dep | — |
-| 54 | `js/lib/expo-core.js` | `js/98-expo-core.js` | logica | expo-core.js — ☁️ Consertar um projeto EXPO para gerar APK pelo EAS Usado pelo Caça-Bug (D | app.json |
-| 55 | `js/lib/guia-maikon.js` | `js/98-guia-maikon.js` | logica | 🧭 Guia das ferramentas do Maikon — o MESMO texto em todos os apps (Mini SK, Meu Chat…). A | — |
-| 56 | `js/lib/lab/30-analise.js` | `js/98-analise.js` | logica | Laboratório — 30-analise.js: lê o projeto INTEIRO (vários arquivos ou um HTML só) e descob | — |
-| 57 | `js/lib/lab/50-comparar.js` | `js/98-comparar.js` | logica | Laboratório — 50-comparar.js: ⚖️ A (o que funciona) × B (o que não funciona), lado a lado. | — |
-| 58 | `js/lib/picotador/00-base.js` | `js/98-base.js` | logica | Picotador — 00-base.js: peças comuns (tela, avisos, baixar, tamanhos) | — |
-| 59 | `js/lib/picotador/10-ler.js` | `js/98-ler.js` | logica | Picotador — 10-ler.js: descobre o que é o arquivo e transforma tudo num formato só. Conver | — |
-| 60 | `js/lib/picotador/20-projetos.js` | `js/98-projetos.js` | logica | Picotador — 20-projetos.js: backup de tudo / projeto .zip → escolher projetos, refazer o . | — |
-| 61 | `js/lib/picotador/30-mensagens.js` | `js/98-mensagens.js` | logica | Picotador — 30-mensagens.js: escolher a conversa, marcar só o pedaço que quer, dividir em  | — |
-| 62 | `js/lib/plano-core.js` | `js/98-plano-core.js` | logica | ext, uniq, normRota, arvore | — |
-| 63 | `js/lib/receita-core.js` | `js/98-receita-core.js` | logica | receita-core.js — 🧬 Receita para recriar um projeto (sem IA). Lê os arquivos, descobre o  | a.js, …, app.css |
-| 64 | `js/lib/selar.js` | `js/98-selar.js` | logica | Mini SK — js/lib/selar.js "Tranca" um segredo do jeito que o GitHub exige para guardar em  | — |
-| 65 | `js/98b-rotas.js` | `js/98-98b-rotas.js` | servidor | Mini SK — 98b-rotas.js  ·  🧭 Mapa de Rotas (tela × servidor × manual) Para o "Failed to f | plano-b.js |
-| 66 | `ferramentas/banco-neon.html` | `js/98-banco-neon.js` | tela | Banco de Dados (Neon) — 🗄 Banco de Dados (Neon) | — |
-| 67 | `css/app.css` | css/app.css | estilo | Mini SK — app.css   (tema escuro, celular e computador) | — |
-| 68 | `index.html` | `js/98-inicio.js` | tela | Mini SK | manifest.json, icon-192.png, app.css, 00-core.js |
+| 14 | `js/81b-pronto.js` | `js/70-81b-pronto.js` | logica | Mini SK — 81b-pronto.js · 🔔 AVISO DE "PRONTO" (18/11) A IA demorou (Ollama, código grande | — |
+| 15 | `js/83-voz.js` | `js/75-voz.js` | logica | Mini SK — 83-voz.js 🗣️ Voz e modo conversa (igual ao jurídico): - Voz: Francisca (neural) | — |
+| 16 | `js/84-ponte.js` | `js/80-ponte.js` | logica | Mini SK — 84-ponte.js 🔗 Ponte com os outros apps (cada um continua separado, sem bagunça) | — |
+| 17 | `js/85-checkpoints.js` | `js/85-checkpoints.js` | logica | Mini SK — 85-checkpoints.js Pontos de volta. Uma "foto" de todos os arquivos do projeto. - | — |
+| 18 | `js/86-terminal.js` | `js/90-terminal.js` | logica | Mini SK — 86-terminal.js ⌨️ Terminal leve, ligado à ÁRVORE do projeto. Funciona no celular | — |
+| 19 | `js/86b-node.js` | `js/91-86b-node.js` | logica | ehSite, lacreLigado, registrarSW, ligarLacre | — |
+| 20 | `js/86c-termux.js` | `js/92-86c-termux.js` | logica | telaCheia, sair, tecla, volta | — |
+| 21 | `js/86e-atalhos.js` | `js/93-86e-atalhos.js` | logica | Mini SK — 86e-atalhos.js ⚡ Comandos prontos para os terminais (⚡ Node e 📱 Termux): um toq | — |
+| 22 | `js/86f-pasta-viva.js` | `js/94-86f-pasta-viva.js` | logica | Mini SK — 86f-pasta-viva.js   (SÓ no Mini SK para PC) 📁 PASTA VIVA: igual ao VS Code. Cad | — |
+| 23 | `js/86g-largura.js` | `js/95-86g-largura.js` | logica | Mini SK — 86g-largura.js ↔ Arraste a borda esquerda do painel (🤖 IA, 💻 Terminal…) para d | — |
+| 24 | `js/86g-saude-pc.js` | `js/96-86g-saude-pc.js` | logica | 🩺 Saúde do computador (só no Mini SK para PC). Um toque: mostra discos, memória, quem est | — |
+| 25 | `js/86h-navegador.js` | `js/97-86h-navegador.js` | logica | 🌐 Navegador de verdade — abre QUALQUER site sem sair do Mini SK (YouTube, GitHub, npm, Ne | — |
+| 26 | `js/86h-node-extra.js` | `js/98-86h-node-extra.js` | logica | Mini SK — 86h-node-extra.js Botões a mais no ⚡ Node (peça separada: se der problema, o Nod | — |
+| 27 | `js/87-banco.js` | `js/98-banco.js` | logica | 🗄 Banco de Dados (Neon) dentro do Mini SK (17/11) Abre a mesma ferramenta do jurídico e d | — |
+| 28 | `js/87-links.js` | `js/98-links.js` | logica | Mini SK — 87-links.js 🔗 Meus Links: guarda os endereços dos seus PWAs e sites num lugar s | — |
+| 29 | `js/88-inventario.js` | `js/98-inventario.js` | logica | texto, limpaTag, familia, analisar | — |
+| 30 | `js/89-config.js` | `js/98-config.js` | logica | Mini SK — 89-config.js ⚙️ Configuração: 🔑 Cofre de chaves (IA, GitHub e "Minhas chaves"). | — |
+| 31 | `js/89b-cacador.js` | `js/98-89b-cacador.js` | logica | Mini SK — 89b-cacador.js 🐞 CAÇADOR DE ERROS (para qualquer app que você rodar aqui) Junta | — |
+| 32 | `js/90-github.js` | `js/98-github.js` | logica | Mini SK — 90-github.js Repositório no GitHub, direto do navegador (sem servidor, sem Repli | — |
+| 33 | `js/91-acoes.js` | `js/98-acoes.js` | logica | Mini SK — 91-acoes.js ⚙️ Execuções no GitHub (Actions) — dentro do painel 🐙 GitHub. Antes | — |
+| 34 | `js/91b-publicar.js` | `js/98-91b-publicar.js` | logica | Mini SK — 91b-publicar.js 🚀 PUBLICAR — um botão para cada coisa (igual ao APK Builder): ? | — |
+| 35 | `js/91c-projetos-gh.js` | `js/98-91c-projetos-gh.js` | logica | Mini SK — 91c-projetos-gh.js 🐙 PROJETOS NO GITHUB — igual ao SK da Replit: - Com o token  | — |
+| 36 | `js/92-playground.js` | `js/98-playground.js` | logica | Mini SK — 92-playground.js ▶️ Playground isolado, que abre ao lado (não é a primeira tela) | — |
+| 37 | `js/92c-importar.js` | `js/98-92c-importar.js` | logica | Mini SK — 92c-importar.js 📥 IMPORTAR TUDO / ✂️ PICOTAR — o Picotador dentro do Mini SK. A | — |
+| 38 | `js/93-conversa.js` | `js/98-conversa.js` | logica | Mini SK — 93-conversa.js 🧩 Desembaralhar conversa: lê uma conversa copiada do app de IA ( | — |
+| 39 | `js/94-fatiador.js` | `js/98-fatiador.js` | logica | lineStates, nameOfJs, splitByStarts, pullComments | — |
+| 40 | `js/95-pwa.js` | `js/98-pwa.js` | logica | gradFill, shapePath, hexA, content | favicon.ico, icon.svg, apple-touch-icon.png |
+| 41 | `js/96-apk.js` | `js/98-apk.js` | logica | wfNome, receitas, MainActivity, Voz | package.json |
+| 42 | `js/96b-eas.js` | `js/98-96b-eas.js` | logica | versaoBase, majorExpo, lerJson, conferir | app.json |
+| 43 | `js/96c-preparar.js` | `js/98-96c-preparar.js` | logica | lerJSON, raizPkg, permissoes, analisar | — |
+| 44 | `js/96d-exe-minisk.js` | `js/98-96d-exe-minisk.js` | logica | Mini SK — 96d-exe-minisk.js Quando o projeto aberto é o PRÓPRIO Mini SK, o .exe sai como o | ponte.cjs, terminal.cjs, saude.cjs, voz.cjs |
+| 45 | `js/96e-exe-python.js` | `js/98-96e-exe-python.js` | logica | Mini SK — 96e-exe-python.js 🪶 Programa .exe LEVE (Python, um arquivo só) — igual ao do ju | — |
+| 46 | `js/97-analise.js` | `js/98-analise.js` | logica | explain, scriptHelp, parseCatalog, analyze | — |
+| 47 | `js/97b-cacabug.js` | `js/98-97b-cacabug.js` | logica | Mini SK — 97b-cacabug.js 🔬 Caça-Bug — DENTRO do Mini SK (não é um app separado): - 🔍 lê  | — |
+| 48 | `js/97c-modularizar.js` | `js/98-97c-modularizar.js` | logica | dirDe, normalizar, juntarCaminho, relativo | ,  |
+| 49 | `js/97d-faxina.js` | `js/98-97d-faxina.js` | logica | Mini SK — 97d-faxina.js  ·  🧹 Faxina do projeto (antes de importar) Para projetos grandes | — |
+| 50 | `js/97f-faxina-pc.js` | `js/98-97f-faxina-pc.js` | logica | chamar, diagnosticar, somaLixo, somaNM | — |
+| 51 | `js/98-api.js` | `js/98-api.js` | logica | Mini SK — 98-api.js 🧪 Testador da API do próprio projeto (o servidor rodando no seu PC, e | — |
+| 52 | `js/98c-montar.js` | `js/98-98c-montar.js` | logica | slug, noFimDoBody, achar, receitaAuto | — |
+| 53 | `js/99-app.js` | css/app.css | logica | Mini SK — 99-app.js Junta tudo: barra de cima, gavetas (Arquivos à esquerda; IA, Busca, Ch | estilo.css, app.js |
+| 54 | `js/lib/cofre-arquivo.js` | `js/98-cofre-arquivo.js` | logica | 🔐 Arquivo de chaves do Maikon — o MESMO formato no Mini SK, no Meu Chat e no que vier dep | — |
+| 55 | `js/lib/expo-core.js` | `js/98-expo-core.js` | logica | expo-core.js — ☁️ Consertar um projeto EXPO para gerar APK pelo EAS Usado pelo Caça-Bug (D | app.json |
+| 56 | `js/lib/guia-maikon.js` | `js/98-guia-maikon.js` | logica | 🧭 Guia das ferramentas do Maikon — o MESMO texto em todos os apps (Mini SK, Meu Chat…). A | — |
+| 57 | `js/lib/lab/30-analise.js` | `js/98-analise.js` | logica | Laboratório — 30-analise.js: lê o projeto INTEIRO (vários arquivos ou um HTML só) e descob | — |
+| 58 | `js/lib/lab/50-comparar.js` | `js/98-comparar.js` | logica | Laboratório — 50-comparar.js: ⚖️ A (o que funciona) × B (o que não funciona), lado a lado. | — |
+| 59 | `js/lib/picotador/00-base.js` | `js/98-base.js` | logica | Picotador — 00-base.js: peças comuns (tela, avisos, baixar, tamanhos) | — |
+| 60 | `js/lib/picotador/10-ler.js` | `js/98-ler.js` | logica | Picotador — 10-ler.js: descobre o que é o arquivo e transforma tudo num formato só. Conver | — |
+| 61 | `js/lib/picotador/20-projetos.js` | `js/98-projetos.js` | logica | Picotador — 20-projetos.js: backup de tudo / projeto .zip → escolher projetos, refazer o . | — |
+| 62 | `js/lib/picotador/30-mensagens.js` | `js/98-mensagens.js` | logica | Picotador — 30-mensagens.js: escolher a conversa, marcar só o pedaço que quer, dividir em  | — |
+| 63 | `js/lib/plano-core.js` | `js/98-plano-core.js` | logica | ext, uniq, normRota, arvore | — |
+| 64 | `js/lib/receita-core.js` | `js/98-receita-core.js` | logica | receita-core.js — 🧬 Receita para recriar um projeto (sem IA). Lê os arquivos, descobre o  | a.js, …, app.css |
+| 65 | `js/lib/selar.js` | `js/98-selar.js` | logica | Mini SK — js/lib/selar.js "Tranca" um segredo do jeito que o GitHub exige para guardar em  | — |
+| 66 | `js/tema.js` | `js/98-tema.js` | logica | 🎨 TEMA — trocar as cores do app (18/11). O mesmo arquivo em todos os apps do Maikon. Escu | — |
+| 67 | `js/98b-rotas.js` | `js/98-98b-rotas.js` | servidor | Mini SK — 98b-rotas.js  ·  🧭 Mapa de Rotas (tela × servidor × manual) Para o "Failed to f | plano-b.js |
+| 68 | `ferramentas/banco-neon.html` | `js/98-banco-neon.js` | tela | Banco de Dados (Neon) — 🗄 Banco de Dados (Neon) | — |
+| 69 | `css/app.css` | css/app.css | estilo | Mini SK — app.css   (tema escuro, celular e computador) | — |
+| 70 | `index.html` | `js/98-inicio.js` | tela | Mini SK | manifest.json, icon-192.png, app.css, 00-core.js |
 
 ## 4. Montar passo a passo (cada bloco é um pedido pronto: 📋 Copiar → colar na IA)
 
@@ -241,7 +245,7 @@ No app original ele tinha estas funções/partes: build, makeRegex, includeFilte
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 10 — `js/55-ai.js` (era `js/80-ai.js`, 1065 linhas)
+### Passo 10 — `js/55-ai.js` (era `js/80-ai.js`, 1075 linhas)
 
 ```text
 Crie js/55-ai.js. Ele faz: Mini SK — 80-ai.js IA para ajudar a escrever código. - Chaves: cole qualquer chave, o provedor é reconhecido sozinho (Groq gsk_, Gemini AIza, OpenAI sk-, Claude sk-ant-, OpenRouter sk-or-, xAI xai-).
@@ -266,105 +270,113 @@ No app original ele tinha estas funções/partes: dolar, limiteMes, avisoPedido,
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 13 — `js/70-voz.js` (era `js/83-voz.js`, 166 linhas)
+### Passo 13 — `js/70-81b-pronto.js` (era `js/81b-pronto.js`, 57 linhas)
 
 ```text
-Crie js/70-voz.js. Ele faz: Mini SK — 83-voz.js 🗣️ Voz e modo conversa (igual ao jurídico): - Voz: Francisca (neural) quando existe no aparelho, velocidade 1,15, tom 0,95. No PC, pelo navegador Edge, aparece "Microsoft Francisca Online (Natural)".
+Crie js/70-81b-pronto.js. Ele faz: Mini SK — 81b-pronto.js · 🔔 AVISO DE "PRONTO" (18/11) A IA demorou (Ollama, código grande, agente)? Ligue 🔔 Avisar na barra da IA: quando ela terminar, o aparelho APITA, VIBRA e mostra uma NOTIFICAÇÃO — pode ir mexer em outra coisa. 🔆 Tela acesa: enquanto ela escreve, a tela não apaga (o Android não pausa o app no meio).
+No app original ele tinha estas funções/partes: ligado, apito, avisar, pedir, botoes.
+Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
+```
+
+### Passo 14 — `js/75-voz.js` (era `js/83-voz.js`, 166 linhas)
+
+```text
+Crie js/75-voz.js. Ele faz: Mini SK — 83-voz.js 🗣️ Voz e modo conversa (igual ao jurídico): - Voz: Francisca (neural) quando existe no aparelho, velocidade 1,15, tom 0,95. No PC, pelo navegador Edge, aparece "Microsoft Francisca Online (Natural)".
 No app original ele tinha estas funções/partes: salvar, carregarVozes, melhorVoz, limpar, pedacos, falar, parar, estado, ouvir, norm, ehEco, enviarFala, ligar, desligar, ajustesHTML, ligarAjustes.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 14 — `js/75-ponte.js` (era `js/84-ponte.js`, 68 linhas)
+### Passo 15 — `js/80-ponte.js` (era `js/84-ponte.js`, 68 linhas)
 
 ```text
-Crie js/75-ponte.js. Ele faz: Mini SK — 84-ponte.js 🔗 Ponte com os outros apps (cada um continua separado, sem bagunça): - 🩺 Mandar o projeto aberto para o Cirurgião (detectar problemas, corrigir). - ↩️ Receber de volta só os arquivos que o Cirurgião corrigiu.
+Crie js/80-ponte.js. Ele faz: Mini SK — 84-ponte.js 🔗 Ponte com os outros apps (cada um continua separado, sem bagunça): - 🩺 Mandar o projeto aberto para o Cirurgião (detectar problemas, corrigir). - ↩️ Receber de volta só os arquivos que o Cirurgião corrigiu.
 No app original ele tinha estas funções/partes: endereco, arquivosDoProjeto, mandarCirurgiao.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 15 — `js/80-checkpoints.js` (era `js/85-checkpoints.js`, 121 linhas)
+### Passo 16 — `js/85-checkpoints.js` (era `js/85-checkpoints.js`, 121 linhas)
 
 ```text
-Crie js/80-checkpoints.js. Ele faz: Mini SK — 85-checkpoints.js Pontos de volta. Uma "foto" de todos os arquivos do projeto. - Manual: você cria quando quiser (botão 📸 ou Ctrl+S duas vezes). - Automático: antes de apagar, importar, trocar tudo, aplicar código da IA,.
+Crie js/85-checkpoints.js. Ele faz: Mini SK — 85-checkpoints.js Pontos de volta. Uma "foto" de todos os arquivos do projeto. - Manual: você cria quando quiser (botão 📸 ou Ctrl+S duas vezes). - Automático: antes de apagar, importar, trocar tudo, aplicar código da IA,.
 No app original ele tinha estas funções/partes: sizeOf, create, prune, list, restore, remove, diff, build, render, onClick, sec.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 16 — `js/85-terminal.js` (era `js/86-terminal.js`, 411 linhas)
+### Passo 17 — `js/90-terminal.js` (era `js/86-terminal.js`, 411 linhas)
 
 ```text
-Crie js/85-terminal.js. Ele faz: Mini SK — 86-terminal.js ⌨️ Terminal leve, ligado à ÁRVORE do projeto. Funciona no celular, sem internet e sem instalar nada. Criou uma pasta aqui, ela aparece em ☰. Comandos: ls, cd, pwd, tree, cat, head, tail, wc, mkdir, touch, rm, mv, cp,.
+Crie js/90-terminal.js. Ele faz: Mini SK — 86-terminal.js ⌨️ Terminal leve, ligado à ÁRVORE do projeto. Funciona no celular, sem internet e sem instalar nada. Criou uma pasta aqui, ela aparece em ☰. Comandos: ls, cd, pwd, tree, cat, head, tail, wc, mkdir, touch, rm, mv, cp,.
 No app original ele tinha estas funções/partes: resolve, isDir, isFile, children, allUnder, base, join, print, err, printHTML, promptText, words, flags, checkpoint, show, walk, encName, npmJSON.
 Ele chamava estes endereços: https://registry.npmjs.org, https://api.npms.io/v2/search?size=15&q=. Em HTML, ligue cada um à função equivalente do módulo certo.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 17 — `js/90-86b-node.js` (era `js/86b-node.js`, 229 linhas)
+### Passo 18 — `js/91-86b-node.js` (era `js/86b-node.js`, 229 linhas)
 
 ```text
-Crie js/90-86b-node.js. Ele é uma parte de logica do app.
+Crie js/91-86b-node.js. Ele é uma parte de logica do app.
 No app original ele tinha estas funções/partes: ehSite, lacreLigado, registrarSW, ligarLacre, carregarScript, carregarCss, arvore, ligar, mostrarServidor, trazer, andar, status, teclas, build, rodar, mandar.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 18 — `js/91-86c-termux.js` (era `js/86c-termux.js`, 595 linhas)
+### Passo 19 — `js/92-86c-termux.js` (era `js/86c-termux.js`, 595 linhas)
 
 ```text
-Crie js/91-86c-termux.js. Ele é uma parte de logica do app.
+Crie js/92-86c-termux.js. Ele é uma parte de logica do app.
 No app original ele tinha estas funções/partes: telaCheia, sair, tecla, volta, status, carregarScript, carregarCss, prepararTela, escreverTela, enviar, tamanho, conectar, desconectar, copiar, buildPC, pcDica, enderecoVer, letra.
 O original usava as bibliotecas http, fs, path, os: em HTML puro, use a versão de CDN (ou faça sem ela, se for simples).
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 19 — `js/92-86e-atalhos.js` (era `js/86e-atalhos.js`, 77 linhas)
+### Passo 20 — `js/93-86e-atalhos.js` (era `js/86e-atalhos.js`, 77 linhas)
 
 ```text
-Crie js/92-86e-atalhos.js. Ele faz: Mini SK — 86e-atalhos.js ⚡ Comandos prontos para os terminais (⚡ Node e 📱 Termux): um toque e o comando vai. Lê o package.json do projeto e cria um botão para cada "npm run …" que existe nele. Usado por 86b-node.js e 86c-termux.js.
+Crie js/93-86e-atalhos.js. Ele faz: Mini SK — 86e-atalhos.js ⚡ Comandos prontos para os terminais (⚡ Node e 📱 Termux): um toque e o comando vai. Lê o package.json do projeto e cria um botão para cada "npm run …" que existe nele. Usado por 86b-node.js e 86c-termux.js.
 No app original ele tinha estas funções/partes: pacotes, montar, pintar, pre.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 20 — `js/93-86f-pasta-viva.js` (era `js/86f-pasta-viva.js`, 145 linhas)
+### Passo 21 — `js/94-86f-pasta-viva.js` (era `js/86f-pasta-viva.js`, 145 linhas)
 
 ```text
-Crie js/93-86f-pasta-viva.js. Ele faz: Mini SK — 86f-pasta-viva.js   (SÓ no Mini SK para PC) 📁 PASTA VIVA: igual ao VS Code. Cada projeto é uma pasta de verdade no computador (Documentos\Mini-SK\NOME-DO-PROJETO) e fica SEMPRE igual à árvore: - você mexe na árvore/editor  → vai sozinho para a pasta;.
+Crie js/94-86f-pasta-viva.js. Ele faz: Mini SK — 86f-pasta-viva.js   (SÓ no Mini SK para PC) 📁 PASTA VIVA: igual ao VS Code. Cada projeto é uma pasta de verdade no computador (Documentos\Mini-SK\NOME-DO-PROJETO) e fica SEMPRE igual à árvore: - você mexe na árvore/editor  → vai sozinho para a pasta;.
 No app original ele tinha estas funções/partes: nomeProj, pasta, assin, assinRec, estado, chamar, item, mandar, iniciar, olhar, esvaziar.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 21 — `js/94-86g-largura.js` (era `js/86g-largura.js`, 37 linhas)
+### Passo 22 — `js/95-86g-largura.js` (era `js/86g-largura.js`, 37 linhas)
 
 ```text
-Crie js/94-86g-largura.js. Ele faz: Mini SK — 86g-largura.js ↔ Arraste a borda esquerda do painel (🤖 IA, 💻 Terminal…) para deixar mais largo ou mais estreito. Fica guardado. No PC, o 💻 Terminal já abre largo (antes ficava espremido em 400px e não dava para ler).
+Crie js/95-86g-largura.js. Ele faz: Mini SK — 86g-largura.js ↔ Arraste a borda esquerda do painel (🤖 IA, 💻 Terminal…) para deixar mais largo ou mais estreito. Fica guardado. No PC, o 💻 Terminal já abre largo (antes ficava espremido em 400px e não dava para ler).
 No app original ele tinha estas funções/partes: aplicar, ligar, mover, soltar.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 22 — `js/95-86g-saude-pc.js` (era `js/86g-saude-pc.js`, 123 linhas)
+### Passo 23 — `js/96-86g-saude-pc.js` (era `js/86g-saude-pc.js`, 123 linhas)
 
 ```text
-Crie js/95-86g-saude-pc.js. Ele faz: 🩺 Saúde do computador (só no Mini SK para PC). Um toque: mostra discos, memória, quem está usando cada porta, as peças instaladas (Node, npm, Git, Ollama), o tamanho das pastas dos projetos e o que dá para limpar. Faz backup dos projetos para outra pasta / HD externo. Também tem os botões 📱 Cara de celular / 💻 Tela grande para a janela.
+Crie js/96-86g-saude-pc.js. Ele faz: 🩺 Saúde do computador (só no Mini SK para PC). Um toque: mostra discos, memória, quem está usando cada porta, as peças instaladas (Node, npm, Git, Ollama), o tamanho das pastas dos projetos e o que dá para limpar. Faz backup dos projetos para outra pasta / HD externo. Também tem os botões 📱 Cara de celular / 💻 Tela grande para a janela.
 No app original ele tinha estas funções/partes: esc, css, barra, pintar, peca, resumoTexto, analisar, montar, msg.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 23 — `js/96-86h-navegador.js` (era `js/86h-navegador.js`, 48 linhas)
+### Passo 24 — `js/97-86h-navegador.js` (era `js/86h-navegador.js`, 48 linhas)
 
 ```text
-Crie js/96-86h-navegador.js. Ele faz: 🌐 Navegador de verdade — abre QUALQUER site sem sair do Mini SK (YouTube, GitHub, npm, Neon, Expo…). - 📦 no APK: é o navegador do próprio Android (AndroidBridge.navegar), com ◀ ▶, endereço e o voltar do celular. - 💻 no Mini SK para PC: uma janela de navegador própria (miniskPC.navegador). - 🌍 no PWA (navegador comum): os sites grandes proíbem aparecer dentro de outra página,.
+Crie js/97-86h-navegador.js. Ele faz: 🌐 Navegador de verdade — abre QUALQUER site sem sair do Mini SK (YouTube, GitHub, npm, Neon, Expo…). - 📦 no APK: é o navegador do próprio Android (AndroidBridge.navegar), com ◀ ▶, endereço e o voltar do celular. - 💻 no Mini SK para PC: uma janela de navegador própria (miniskPC.navegador). - 🌍 no PWA (navegador comum): os sites grandes proíbem aparecer dentro de outra página,.
 No app original ele tinha estas funções/partes: temDeVerdade, arrumar, guardar, abrir, perguntar, ligar.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 24 — `js/97-86h-node-extra.js` (era `js/86h-node-extra.js`, 68 linhas)
+### Passo 25 — `js/98-86h-node-extra.js` (era `js/86h-node-extra.js`, 68 linhas)
 
 ```text
-Crie js/97-86h-node-extra.js. Ele faz: Mini SK — 86h-node-extra.js Botões a mais no ⚡ Node (peça separada: se der problema, o Node continua igual): 🔗 Árvore ligada — o que o Node cria/muda (dist, arquivos novos) aparece sozinho na árvore 🤖 Chamar a IA · 🦙 Usar o Ollama · 👁 Ver na tela o que o npm run dev ligou.
+Crie js/98-86h-node-extra.js. Ele faz: Mini SK — 86h-node-extra.js Botões a mais no ⚡ Node (peça separada: se der problema, o Node continua igual): 🔗 Árvore ligada — o que o Node cria/muda (dist, arquivos novos) aparece sozinho na árvore 🤖 Chamar a IA · 🦙 Usar o Ollama · 👁 Ver na tela o que o npm run dev ligou.
 No app original ele tinha estas funções/partes: puxar, ligarArvore, montar.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 25 — `js/98-banco.js` (era `js/87-banco.js`, 21 linhas)
+### Passo 26 — `js/98-banco.js` (era `js/87-banco.js`, 21 linhas)
 
 ```text
 Crie js/98-banco.js. Ele faz: 🗄 Banco de Dados (Neon) dentro do Mini SK (17/11) Abre a mesma ferramenta do jurídico e do Laboratório numa tela por cima. Para os seus projetos que têm banco: ver tabelas, criar, acrescentar campo, baixar tudo. O endereço do Neon (tem a senha) fica só neste aparelho.
@@ -372,7 +384,7 @@ No app original ele tinha estas funções/partes: abrir.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 26 — `js/98-links.js` (era `js/87-links.js`, 210 linhas)
+### Passo 27 — `js/98-links.js` (era `js/87-links.js`, 210 linhas)
 
 ```text
 Crie js/98-links.js. Ele faz: Mini SK — 87-links.js 🔗 Meus Links: guarda os endereços dos seus PWAs e sites num lugar só (eles não somem como os "instalados" que o celular apaga). - Colar um ou vários links de uma vez; nome e ícone automáticos.
@@ -380,7 +392,7 @@ No app original ele tinha estas funções/partes: salvarLocal, salvar, carregar,
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 27 — `js/98-inventario.js` (era `js/88-inventario.js`, 183 linhas)
+### Passo 28 — `js/98-inventario.js` (era `js/88-inventario.js`, 183 linhas)
 
 ```text
 Crie js/98-inventario.js. Ele é uma parte de logica do app.
@@ -388,7 +400,7 @@ No app original ele tinha estas funções/partes: texto, limpaTag, familia, anal
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 28 — `js/98-config.js` (era `js/89-config.js`, 327 linhas)
+### Passo 29 — `js/98-config.js` (era `js/89-config.js`, 327 linhas)
 
 ```text
 Crie js/98-config.js. Ele faz: Mini SK — 89-config.js ⚙️ Configuração: 🔑 Cofre de chaves (IA, GitHub e "Minhas chaves"). Tudo guardado SÓ neste aparelho. Sem login, sem nuvem.
@@ -396,7 +408,7 @@ No app original ele tinha estas funções/partes: extras, cofreLocal, aplicaCofr
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 29 — `js/98-89b-cacador.js` (era `js/89b-cacador.js`, 123 linhas)
+### Passo 30 — `js/98-89b-cacador.js` (era `js/89b-cacador.js`, 123 linhas)
 
 ```text
 Crie js/98-89b-cacador.js. Ele faz: Mini SK — 89b-cacador.js 🐞 CAÇADOR DE ERROS (para qualquer app que você rodar aqui) Junta num lugar só os erros da PRÉVIA (tela), das chamadas ao SERVIDOR e dos TERMINAIS (⚡ Node, 📱 Termux, 💻 PC). Diz em português se é normal,.
@@ -405,7 +417,7 @@ Ele chamava estes endereços: sw.js, http://127.0.0.1:. Em HTML, ligue cada um �
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 30 — `js/98-github.js` (era `js/90-github.js`, 331 linhas)
+### Passo 31 — `js/98-github.js` (era `js/90-github.js`, 331 linhas)
 
 ```text
 Crie js/98-github.js. Ele faz: Mini SK — 90-github.js Repositório no GitHub, direto do navegador (sem servidor, sem Replit): - Cole seu token (github.com/settings/tokens — "Fine-grained", com acesso "Contents: Read and write" nos repositórios; para criar repositório.
@@ -413,7 +425,7 @@ No app original ele tinha estas funções/partes: explain, pool, worker, gitSha,
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 31 — `js/98-acoes.js` (era `js/91-acoes.js`, 232 linhas)
+### Passo 32 — `js/98-acoes.js` (era `js/91-acoes.js`, 232 linhas)
 
 ```text
 Crie js/98-acoes.js. Ele faz: Mini SK — 91-acoes.js ⚙️ Execuções no GitHub (Actions) — dentro do painel 🐙 GitHub. Antes o Mini SK só ENVIAVA. Agora ele também mostra o que o GitHub faz com o que foi enviado:.
@@ -422,7 +434,7 @@ Ele chamava estes endereços: https://api.github.com. Em HTML, ligue cada um à 
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 32 — `js/98-91b-publicar.js` (era `js/91b-publicar.js`, 127 linhas)
+### Passo 33 — `js/98-91b-publicar.js` (era `js/91b-publicar.js`, 127 linhas)
 
 ```text
 Crie js/98-91b-publicar.js. Ele faz: Mini SK — 91b-publicar.js 🚀 PUBLICAR — um botão para cada coisa (igual ao APK Builder): 🌐 Site / PWA (GitHub Pages) · 📦 APK · 💻 .exe E a lista 📜 MINHAS PUBLICAÇÕES: o link fica guardado e NÃO some quando.
@@ -430,7 +442,7 @@ No app original ele tinha estas funções/partes: hist, guardar, pintarHist, pub
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 33 — `js/98-91c-projetos-gh.js` (era `js/91c-projetos-gh.js`, 200 linhas)
+### Passo 34 — `js/98-91c-projetos-gh.js` (era `js/91c-projetos-gh.js`, 200 linhas)
 
 ```text
 Crie js/98-91c-projetos-gh.js. Ele faz: Mini SK — 91c-projetos-gh.js 🐙 PROJETOS NO GITHUB — igual ao SK da Replit: - Com o token do GitHub, a lista dos seus repositórios aparece em 🗂 Projetos (os 100 mais recentes primeiro + "Mais antigos" + 🔎 pesquisa em todos).
@@ -438,7 +450,7 @@ No app original ele tinha estas funções/partes: lerPref, linkDe, sincDe, situa
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 34 — `js/98-playground.js` (era `js/92-playground.js`, 385 linhas)
+### Passo 35 — `js/98-playground.js` (era `js/92-playground.js`, 385 linhas)
 
 ```text
 Crie js/98-playground.js. Ele faz: Mini SK — 92-playground.js ▶️ Playground isolado, que abre ao lado (não é a primeira tela). Vem do CodeLens, sem servidor: - HTML (+ CSS + JS), React (JSX) e Python (no próprio navegador).
@@ -446,7 +458,7 @@ No app original ele tinha estas funções/partes: App, fresh, esc, prepJSX, page
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 35 — `js/98-92c-importar.js` (era `js/92c-importar.js`, 85 linhas)
+### Passo 36 — `js/98-92c-importar.js` (era `js/92c-importar.js`, 85 linhas)
 
 ```text
 Crie js/98-92c-importar.js. Ele faz: Mini SK — 92c-importar.js 📥 IMPORTAR TUDO / ✂️ PICOTAR — o Picotador dentro do Mini SK. Abre memória, backup de tudo, projeto .zip e conversas do ChatGPT/Claude, deixa escolher só o pedaço, e TRAZ DIRETO para o Mini SK (sem baixar nada):.
@@ -454,7 +466,7 @@ No app original ele tinha estas funções/partes: trazerProjetos, porMemoria, bu
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 36 — `js/98-conversa.js` (era `js/93-conversa.js`, 144 linhas)
+### Passo 37 — `js/98-conversa.js` (era `js/93-conversa.js`, 144 linhas)
 
 ```text
 Crie js/98-conversa.js. Ele faz: Mini SK — 93-conversa.js 🧩 Desembaralhar conversa: lê uma conversa copiada do app de IA (Monica, ChatGPT, Claude…) onde o código veio SEM marcação (sem ```), separa o que é texto e o que é código, e recupera cada arquivo:.
@@ -462,7 +474,7 @@ No app original ele tinha estas funções/partes: codeScore, sniff, slug, parse,
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 37 — `js/98-fatiador.js` (era `js/94-fatiador.js`, 392 linhas)
+### Passo 38 — `js/98-fatiador.js` (era `js/94-fatiador.js`, 392 linhas)
 
 ```text
 Crie js/98-fatiador.js. Ele é uma parte de logica do app.
@@ -470,7 +482,7 @@ No app original ele tinha estas funções/partes: lineStates, nameOfJs, splitByS
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 38 — `js/98-pwa.js` (era `js/95-pwa.js`, 613 linhas)
+### Passo 39 — `js/98-pwa.js` (era `js/95-pwa.js`, 613 linhas)
 
 ```text
 Crie js/98-pwa.js. Ele é uma parte de logica do app.
@@ -479,7 +491,7 @@ Ele chamava estes endereços: ./. Em HTML, ligue cada um à função equivalente
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 39 — `js/98-apk.js` (era `js/96-apk.js`, 1570 linhas)
+### Passo 40 — `js/98-apk.js` (era `js/96-apk.js`, 1570 linhas)
 
 ```text
 Crie js/98-apk.js. Ele é uma parte de logica do app.
@@ -489,7 +501,7 @@ Ele chamava estes endereços: https://api.github.com/repos/. Em HTML, ligue cada
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 40 — `js/98-96b-eas.js` (era `js/96b-eas.js`, 278 linhas)
+### Passo 41 — `js/98-96b-eas.js` (era `js/96b-eas.js`, 278 linhas)
 
 ```text
 Crie js/98-96b-eas.js. Ele é uma parte de logica do app.
@@ -499,7 +511,7 @@ Ele chamava estes endereços: https://api.expo.dev/graphql. Em HTML, ligue cada 
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 41 — `js/98-96c-preparar.js` (era `js/96c-preparar.js`, 554 linhas)
+### Passo 42 — `js/98-96c-preparar.js` (era `js/96c-preparar.js`, 554 linhas)
 
 ```text
 Crie js/98-96c-preparar.js. Ele é uma parte de logica do app.
@@ -508,7 +520,7 @@ O original usava as bibliotecas electron, path, fs, url: em HTML puro, use a ver
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 42 — `js/98-96d-exe-minisk.js` (era `js/96d-exe-minisk.js`, 27 linhas)
+### Passo 43 — `js/98-96d-exe-minisk.js` (era `js/96d-exe-minisk.js`, 27 linhas)
 
 ```text
 Crie js/98-96d-exe-minisk.js. Ele faz: Mini SK — 96d-exe-minisk.js Quando o projeto aberto é o PRÓPRIO Mini SK, o .exe sai como o Mini SK para PC de verdade (com o terminal do computador, a ponte e a pasta viva), e não a "casca só de tela" (que abria o terminal pedindo Termux).
@@ -517,7 +529,7 @@ O original usava as bibliotecas electron, child_process, path, fs, http, net, cr
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 43 — `js/98-96e-exe-python.js` (era `js/96e-exe-python.js`, 33 linhas)
+### Passo 44 — `js/98-96e-exe-python.js` (era `js/96e-exe-python.js`, 33 linhas)
 
 ```text
 Crie js/98-96e-exe-python.js. Ele faz: Mini SK — 96e-exe-python.js 🪶 Programa .exe LEVE (Python, um arquivo só) — igual ao do jurídico que funciona. Sem Electron: pequeno (uns 10 MB) e sem tela preta. Abre o app numa janela do Edge/Chrome. Para o próprio Mini SK, já vem com o "lacre" ligado.
@@ -525,7 +537,7 @@ No app original ele tinha estas funções/partes: Pagina, __init__, send_head, e
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 44 — `js/98-analise.js` (era `js/97-analise.js`, 455 linhas)
+### Passo 45 — `js/98-analise.js` (era `js/97-analise.js`, 455 linhas)
 
 ```text
 Crie js/98-analise.js. Ele é uma parte de logica do app.
@@ -533,7 +545,7 @@ No app original ele tinha estas funções/partes: explain, scriptHelp, parseCata
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 45 — `js/98-97b-cacabug.js` (era `js/97b-cacabug.js`, 185 linhas)
+### Passo 46 — `js/98-97b-cacabug.js` (era `js/97b-cacabug.js`, 185 linhas)
 
 ```text
 Crie js/98-97b-cacabug.js. Ele faz: Mini SK — 97b-cacabug.js 🔬 Caça-Bug — DENTRO do Mini SK (não é um app separado): - 🔍 lê o projeto aberto inteiro (o motor do Laboratório) e acha os defeitos: nome declarado 2 vezes, erro de escrita, arquivo que não existe, botão que.
@@ -541,7 +553,7 @@ No app original ele tinha estas funções/partes: script, carregar, converter, a
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 46 — `js/98-97c-modularizar.js` (era `js/97c-modularizar.js`, 316 linhas)
+### Passo 47 — `js/98-97c-modularizar.js` (era `js/97c-modularizar.js`, 316 linhas)
 
 ```text
 Crie js/98-97c-modularizar.js. Ele é uma parte de logica do app.
@@ -549,7 +561,7 @@ No app original ele tinha estas funções/partes: dirDe, normalizar, juntarCamin
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 47 — `js/98-97d-faxina.js` (era `js/97d-faxina.js`, 201 linhas)
+### Passo 48 — `js/98-97d-faxina.js` (era `js/97d-faxina.js`, 201 linhas)
 
 ```text
 Crie js/98-97d-faxina.js. Ele faz: Mini SK — 97d-faxina.js  ·  🧹 Faxina do projeto (antes de importar) Para projetos grandes (ex.: o jurídico do Replit). Olha o pacote/pasta SEM encher o Mini SK e mostra, em português: 1. 🗑 LIXO: node_modules, .git, caches do Replit… (quanto pesa cada um).
@@ -557,7 +569,7 @@ No app original ele tinha estas funções/partes: mascarar, tam, ehTexto, precis
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 48 — `js/98-97f-faxina-pc.js` (era `js/97f-faxina-pc.js`, 209 linhas)
+### Passo 49 — `js/98-97f-faxina-pc.js` (era `js/97f-faxina-pc.js`, 209 linhas)
 
 ```text
 Crie js/98-97f-faxina-pc.js. Ele é uma parte de logica do app.
@@ -566,7 +578,7 @@ Ele chamava estes endereços: http://127.0.0.1:. Em HTML, ligue cada um à funç
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 49 — `js/98-api.js` (era `js/98-api.js`, 150 linhas)
+### Passo 50 — `js/98-api.js` (era `js/98-api.js`, 150 linhas)
 
 ```text
 Crie js/98-api.js. Ele faz: Mini SK — 98-api.js 🧪 Testador da API do próprio projeto (o servidor rodando no seu PC, ex.: http://localhost:8080 ou o EXE leve em 127.0.0.1:18633). - Acha sozinho as ROTAS do servidor no código (Express, Fastify, Hono,.
@@ -574,7 +586,7 @@ No app original ele tinha estas funções/partes: lineOf, analyze, toRe, fullPat
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 50 — `js/98-98c-montar.js` (era `js/98c-montar.js`, 87 linhas)
+### Passo 51 — `js/98-98c-montar.js` (era `js/98c-montar.js`, 87 linhas)
 
 ```text
 Crie js/98-98c-montar.js. Ele é uma parte de logica do app.
@@ -582,7 +594,7 @@ No app original ele tinha estas funções/partes: slug, noFimDoBody, achar, rece
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 51 — `js/98-cofre-arquivo.js` (era `js/lib/cofre-arquivo.js`, 61 linhas)
+### Passo 52 — `js/98-cofre-arquivo.js` (era `js/lib/cofre-arquivo.js`, 61 linhas)
 
 ```text
 Crie js/98-cofre-arquivo.js. Ele faz: 🔐 Arquivo de chaves do Maikon — o MESMO formato no Mini SK, no Meu Chat e no que vier depois. Guarda SÓ as chaves (IA, GitHub, Expo, pesquisa e "Minhas chaves"), trancadas com uma senha sua (AES-GCM 256 + PBKDF2 com 250 mil voltas — sem a senha, o arquivo não abre). Assim dá para levar as chaves de um app/aparelho para outro sem passar pelo WhatsApp.
@@ -590,7 +602,7 @@ No app original ele tinha estas funções/partes: b64, deB64, chaveDaSenha, norm
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 52 — `js/98-expo-core.js` (era `js/lib/expo-core.js`, 201 linhas)
+### Passo 53 — `js/98-expo-core.js` (era `js/lib/expo-core.js`, 201 linhas)
 
 ```text
 Crie js/98-expo-core.js. Ele faz: expo-core.js — ☁️ Consertar um projeto EXPO para gerar APK pelo EAS Usado pelo Caça-Bug (Diagnóstico) e pelo Mini SK (painel ☁️ EAS). Junta o que os geradores antigos faziam separado (app.json, eas.json, autorizações, receita do GitHub) + limpeza da Replit, numa passada só.
@@ -599,7 +611,7 @@ O original usava as bibliotecas fs: em HTML puro, use a versão de CDN (ou faça
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 53 — `js/98-guia-maikon.js` (era `js/lib/guia-maikon.js`, 117 linhas)
+### Passo 54 — `js/98-guia-maikon.js` (era `js/lib/guia-maikon.js`, 117 linhas)
 
 ```text
 Crie js/98-guia-maikon.js. Ele faz: 🧭 Guia das ferramentas do Maikon — o MESMO texto em todos os apps (Mini SK, Meu Chat…). A IA de cada app lê isto sozinha: assim ela já sabe o que ele tem, para que serve cada coisa, e quando é melhor mandar para outra ferramenta ou "levar para o Claude". Para atualizar: troque este arquivo nos apps (o Claude manda a versão nova junto).
@@ -607,7 +619,7 @@ No app original ele tinha estas funções/partes: resumoParaClaude, esconder.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 54 — `js/98-analise.js` (era `js/lib/lab/30-analise.js`, 177 linhas)
+### Passo 55 — `js/98-analise.js` (era `js/lib/lab/30-analise.js`, 177 linhas)
 
 ```text
 Crie js/98-analise.js. Ele faz: Laboratório — 30-analise.js: lê o projeto INTEIRO (vários arquivos ou um HTML só) e descobre: os arquivos, como cada página carrega, as funções (o que fazem, quem chama quem), as ligações entre arquivos, dependências, rotas, e os problemas. O "motor" das funções é o do 🔪 Desmontar.
@@ -615,7 +627,7 @@ No app original ele tinha estas funções/partes: explicar, tipoArq, ehBibliotec
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 55 — `js/98-comparar.js` (era `js/lib/lab/50-comparar.js`, 131 linhas)
+### Passo 56 — `js/98-comparar.js` (era `js/lib/lab/50-comparar.js`, 131 linhas)
 
 ```text
 Crie js/98-comparar.js. Ele faz: Laboratório — 50-comparar.js: ⚖️ A (o que funciona) × B (o que não funciona), lado a lado. Mostra arquivos novos/sumidos/mudados, as funções que mudaram e os problemas que só existem em B.
@@ -623,14 +635,14 @@ No app original ele tinha estas funções/partes: diff, norm, ladoAlado, lin, ch
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 56 — `js/98-base.js` (era `js/lib/picotador/00-base.js`, 35 linhas)
+### Passo 57 — `js/98-base.js` (era `js/lib/picotador/00-base.js`, 35 linhas)
 
 ```text
 Crie js/98-base.js. Ele faz: Picotador — 00-base.js: peças comuns (tela, avisos, baixar, tamanhos).
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 57 — `js/98-ler.js` (era `js/lib/picotador/10-ler.js`, 93 linhas)
+### Passo 58 — `js/98-ler.js` (era `js/lib/picotador/10-ler.js`, 93 linhas)
 
 ```text
 Crie js/98-ler.js. Ele faz: Picotador — 10-ler.js: descobre o que é o arquivo e transforma tudo num formato só. Conversa = { titulo, data, origem, mensagens: [{ role: 'user'|'assistant', content }], diario } Projeto  = { name, files: { caminho: { text } | { b64 } }, folders: [] , ...resto do Mini SK }.
@@ -638,7 +650,7 @@ No app original ele tinha estas funções/partes: ehMsg, doChatGPT, doClaude, do
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 58 — `js/98-projetos.js` (era `js/lib/picotador/20-projetos.js`, 82 linhas)
+### Passo 59 — `js/98-projetos.js` (era `js/lib/picotador/20-projetos.js`, 82 linhas)
 
 ```text
 Crie js/98-projetos.js. Ele faz: Picotador — 20-projetos.js: backup de tudo / projeto .zip → escolher projetos, refazer o .zip original, separar um backup por projeto e abrir a memória (.sk) de cada um para picotar.
@@ -646,7 +658,7 @@ No app original ele tinha estas funções/partes: nMem, resumo.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 59 — `js/98-mensagens.js` (era `js/lib/picotador/30-mensagens.js`, 129 linhas)
+### Passo 60 — `js/98-mensagens.js` (era `js/lib/picotador/30-mensagens.js`, 129 linhas)
 
 ```text
 Crie js/98-mensagens.js. Ele faz: Picotador — 30-mensagens.js: escolher a conversa, marcar só o pedaço que quer, dividir em partes e baixar como memória do Mini SK, texto (.md) ou os códigos (.zip).
@@ -654,7 +666,7 @@ No app original ele tinha estas funções/partes: tokens, pintar, paraMD, paraMe
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 60 — `js/98-plano-core.js` (era `js/lib/plano-core.js`, 171 linhas)
+### Passo 61 — `js/98-plano-core.js` (era `js/lib/plano-core.js`, 171 linhas)
 
 ```text
 Crie js/98-plano-core.js. Ele é uma parte de logica do app.
@@ -662,7 +674,7 @@ No app original ele tinha estas funções/partes: ext, uniq, normRota, arvore, a
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 61 — `js/98-receita-core.js` (era `js/lib/receita-core.js`, 139 linhas)
+### Passo 62 — `js/98-receita-core.js` (era `js/lib/receita-core.js`, 139 linhas)
 
 ```text
 Crie js/98-receita-core.js. Ele faz: receita-core.js — 🧬 Receita para recriar um projeto (sem IA). Lê os arquivos, descobre o que cada um faz e monta: - RECEITA.md: visão geral, estrutura modular proposta, ordem de montagem e UM PEDIDO PRONTO POR ARQUIVO (para colar em qualquer IA, até as pequenas);.
@@ -670,7 +682,7 @@ No app original ele tinha estas funções/partes: slug, base, semExt, uniq, pape
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 62 — `js/98-selar.js` (era `js/lib/selar.js`, 94 linhas)
+### Passo 63 — `js/98-selar.js` (era `js/lib/selar.js`, 94 linhas)
 
 ```text
 Crie js/98-selar.js. Ele faz: Mini SK — js/lib/selar.js "Tranca" um segredo do jeito que o GitHub exige para guardar em Settings → Secrets (libsodium "sealed box"): chave temporária (X25519) + nonce = BLAKE2b(chaveTemp || chaveDoRepo, 24 bytes).
@@ -678,7 +690,15 @@ No app original ele tinha estas funções/partes: add64, add64c, compress, blake
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 63 — `js/98-98b-rotas.js` (era `js/98b-rotas.js`, 312 linhas)
+### Passo 64 — `js/98-tema.js` (era `js/tema.js`, 44 linhas)
+
+```text
+Crie js/98-tema.js. Ele faz: 🎨 TEMA — trocar as cores do app (18/11). O mesmo arquivo em todos os apps do Maikon. Escuro (o de sempre) · Claro · Alto contraste (letra bem branca no preto) · Papel (sépia, cansa menos a vista). Cada app diz quais são as cores dele (window.TEMA_APP) e onde fica o botão 🎨. Fica guardado neste aparelho. Não muda nada do projeto, só as cores da tela.
+No app original ele tinha estas funções/partes: ler, aplicar, menu, fora, botao.
+Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
+```
+
+### Passo 65 — `js/98-98b-rotas.js` (era `js/98b-rotas.js`, 312 linhas)
 
 ```text
 Crie js/98-98b-rotas.js. Ele faz: Mini SK — 98b-rotas.js  ·  🧭 Mapa de Rotas (tela × servidor × manual) Para o "Failed to fetch" / "não encontrado" / tela azul: 1. Acha as CHAMADAS que a tela faz (/api/...), as ROTAS que o servidor tem e as rotas que o MANUAL/plano diz (arquivos .md ou texto colado).
@@ -687,26 +707,26 @@ No original isto era SERVIDOR com as rotas GET /y, GET /x. Em HTML, troque por f
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 64 — `js/98-banco-neon.js` (era `ferramentas/banco-neon.html`, 250 linhas)
+### Passo 66 — `js/98-banco-neon.js` (era `ferramentas/banco-neon.html`, 337 linhas)
 
 ```text
 Crie js/98-banco-neon.js. Ele faz: Banco de Dados (Neon) — 🗄 Banco de Dados (Neon).
-No app original ele tinha estas funções/partes: mostrarModelo, traduzir, listar, grade, cel, nomeSeguro, ver, baixar, csv, tudoDe, confirmar, rodar, limpo, campo, sqlNova, pintarNc.
+No app original ele tinha estas funções/partes: mostrarModelo, traduzir, listar, grade, cel, nomeSeguro, ver, baixar, csv, tudoDe, confirmar, rodar, limpo, campo, sqlNova, pintarNc, esquema, iaDoApp.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 65 — `js/98-inicio.js` (era `index.html`, 136 linhas)
+### Passo 67 — `js/98-inicio.js` (era `index.html`, 144 linhas)
 
 ```text
 Crie js/98-inicio.js. Ele faz: Mini SK.
-Ele usa o que já foi criado em: js/10-conta.js, js/15-fs.js, js/20-zip.js, js/25-highlight.js, js/30-editor.js, js/35-tree.js, js/40-preview.js, js/45-tsx.js, js/50-search.js, js/55-ai.js, js/60-80b-web.js, js/65-gasto.js, js/70-voz.js, js/75-ponte.js, js/80-checkpoints.js, js/85-terminal.js, js/90-86b-node.js, js/97-86h-node-extra.js, js/91-86c-termux.js, js/93-86f-pasta-viva.js, js/95-86g-saude-pc.js, js/96-86h-navegador.js, js/94-86g-largura.js, js/98-base.js, js/98-ler.js, js/98-projetos.js, js/98-mensagens.js, js/98-92c-importar.js, js/98-91b-publicar.js, js/92-86e-atalhos.js, js/98-links.js, js/98-inventario.js, js/98-config.js, js/98-89b-cacador.js, js/98-github.js, js/98-91c-projetos-gh.js, js/98-acoes.js, js/98-playground.js, js/98-conversa.js, js/98-fatiador.js, js/98-pwa.js, js/98-apk.js, js/98-96d-exe-minisk.js, js/98-96e-exe-python.js, js/98-selar.js, js/98-cofre-arquivo.js, js/98-guia-maikon.js, js/98-expo-core.js, js/98-96b-eas.js, js/98-plano-core.js, js/98-receita-core.js, js/98-96c-preparar.js, js/98-analise.js, js/98-97b-cacabug.js, js/98-97c-modularizar.js, js/98-97d-faxina.js, js/98-97f-faxina-pc.js, js/98-api.js, js/98-98b-rotas.js, js/98-98c-montar.js, js/98-banco.js (pelo APP).
+Ele usa o que já foi criado em: js/10-conta.js, js/15-fs.js, js/20-zip.js, js/25-highlight.js, js/30-editor.js, js/35-tree.js, js/40-preview.js, js/45-tsx.js, js/50-search.js, js/55-ai.js, js/60-80b-web.js, js/65-gasto.js, js/70-81b-pronto.js, js/75-voz.js, js/80-ponte.js, js/85-checkpoints.js, js/90-terminal.js, js/91-86b-node.js, js/98-86h-node-extra.js, js/92-86c-termux.js, js/94-86f-pasta-viva.js, js/96-86g-saude-pc.js, js/97-86h-navegador.js, js/95-86g-largura.js, js/98-base.js, js/98-ler.js, js/98-projetos.js, js/98-mensagens.js, js/98-92c-importar.js, js/98-91b-publicar.js, js/93-86e-atalhos.js, js/98-links.js, js/98-inventario.js, js/98-config.js, js/98-89b-cacador.js, js/98-github.js, js/98-91c-projetos-gh.js, js/98-acoes.js, js/98-playground.js, js/98-conversa.js, js/98-fatiador.js, js/98-pwa.js, js/98-apk.js, js/98-96d-exe-minisk.js, js/98-96e-exe-python.js, js/98-selar.js, js/98-cofre-arquivo.js, js/98-guia-maikon.js, js/98-expo-core.js, js/98-96b-eas.js, js/98-plano-core.js, js/98-receita-core.js, js/98-96c-preparar.js, js/98-analise.js, js/98-97b-cacabug.js, js/98-97c-modularizar.js, js/98-97d-faxina.js, js/98-97f-faxina-pc.js, js/98-api.js, js/98-98b-rotas.js, js/98-98c-montar.js, js/98-banco.js, js/98-tema.js (pelo APP).
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 66 — `js/99-app.js` e conferir
+### Passo 68 — `js/99-app.js` e conferir
 
 ```text
-Crie js/99-app.js: ele olha APP.modulos e monta o menu/abas com um botão para cada módulo. Depois, me mande o index.html atualizado com todos os <script src="js/…"> na ordem certa: js/00-core.js, js/10-conta.js, js/15-fs.js, js/20-zip.js, js/25-highlight.js, js/30-editor.js, js/35-tree.js, js/40-preview.js, js/45-tsx.js, js/50-search.js, js/55-ai.js, js/60-80b-web.js, js/65-gasto.js, js/70-voz.js, js/75-ponte.js, js/80-checkpoints.js, js/85-terminal.js, js/90-86b-node.js, js/91-86c-termux.js, js/92-86e-atalhos.js, js/93-86f-pasta-viva.js, js/94-86g-largura.js, js/95-86g-saude-pc.js, js/96-86h-navegador.js, js/97-86h-node-extra.js, js/98-banco.js, js/98-links.js, js/98-inventario.js, js/98-config.js, js/98-89b-cacador.js, js/98-github.js, js/98-acoes.js, js/98-91b-publicar.js, js/98-91c-projetos-gh.js, js/98-playground.js, js/98-92c-importar.js, js/98-conversa.js, js/98-fatiador.js, js/98-pwa.js, js/98-apk.js, js/98-96b-eas.js, js/98-96c-preparar.js, js/98-96d-exe-minisk.js, js/98-96e-exe-python.js, js/98-analise.js, js/98-97b-cacabug.js, js/98-97c-modularizar.js, js/98-97d-faxina.js, js/98-97f-faxina-pc.js, js/98-api.js, js/98-98c-montar.js, js/98-cofre-arquivo.js, js/98-expo-core.js, js/98-guia-maikon.js, js/98-analise.js, js/98-comparar.js, js/98-base.js, js/98-ler.js, js/98-projetos.js, js/98-mensagens.js, js/98-plano-core.js, js/98-receita-core.js, js/98-selar.js, js/98-98b-rotas.js, js/98-banco-neon.js, js/98-inicio.js, js/99-app.js.
+Crie js/99-app.js: ele olha APP.modulos e monta o menu/abas com um botão para cada módulo. Depois, me mande o index.html atualizado com todos os <script src="js/…"> na ordem certa: js/00-core.js, js/10-conta.js, js/15-fs.js, js/20-zip.js, js/25-highlight.js, js/30-editor.js, js/35-tree.js, js/40-preview.js, js/45-tsx.js, js/50-search.js, js/55-ai.js, js/60-80b-web.js, js/65-gasto.js, js/70-81b-pronto.js, js/75-voz.js, js/80-ponte.js, js/85-checkpoints.js, js/90-terminal.js, js/91-86b-node.js, js/92-86c-termux.js, js/93-86e-atalhos.js, js/94-86f-pasta-viva.js, js/95-86g-largura.js, js/96-86g-saude-pc.js, js/97-86h-navegador.js, js/98-86h-node-extra.js, js/98-banco.js, js/98-links.js, js/98-inventario.js, js/98-config.js, js/98-89b-cacador.js, js/98-github.js, js/98-acoes.js, js/98-91b-publicar.js, js/98-91c-projetos-gh.js, js/98-playground.js, js/98-92c-importar.js, js/98-conversa.js, js/98-fatiador.js, js/98-pwa.js, js/98-apk.js, js/98-96b-eas.js, js/98-96c-preparar.js, js/98-96d-exe-minisk.js, js/98-96e-exe-python.js, js/98-analise.js, js/98-97b-cacabug.js, js/98-97c-modularizar.js, js/98-97d-faxina.js, js/98-97f-faxina-pc.js, js/98-api.js, js/98-98c-montar.js, js/98-cofre-arquivo.js, js/98-expo-core.js, js/98-guia-maikon.js, js/98-analise.js, js/98-comparar.js, js/98-base.js, js/98-ler.js, js/98-projetos.js, js/98-mensagens.js, js/98-plano-core.js, js/98-receita-core.js, js/98-selar.js, js/98-tema.js, js/98-98b-rotas.js, js/98-banco-neon.js, js/98-inicio.js, js/99-app.js.
 ```
 
 ## 5. Conferir no final

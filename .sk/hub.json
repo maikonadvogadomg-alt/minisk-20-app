@@ -6,7 +6,7 @@
       "path": "ferramentas/banco-neon.html",
       "nome": "Banco de Dados (Neon)",
       "desc": "",
-      "on": true,
+      "on": false,
       "icone": ""
     },
     {
@@ -17,8 +17,8 @@
       "icone": "icons/icon.svg"
     }
   ],
-  "sub": "maikonmg3@gmail.com",
-  "logo": "⚖️",
-  "tema": "claro",
+  "sub": "",
+  "logo": "🖥️",
+  "tema": "dourado",
   "links": []
 }

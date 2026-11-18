@@ -334,7 +334,15 @@
     if (!freeMode && fs().project) t += '\nPROJETO: ' + fs().project.name + ' (' + fs().list().filter((f) => !f.startsWith('.sk/')).length + ' arquivos)';
     return t;
   }
-  function systemPrompt() {
+  // 🧭 17/11: o guia dos outros apps (~14 mil letras) ia em TODA mensagem e saía caro.
+  // Agora: só vai inteiro quando a pergunta é sobre os apps (ou se você ligar 🧭 Guia sempre). Nas outras, 1 linha.
+  const SOBRE_APPS = /(app|aplicativ|ferrament|vers[aã]o|laborat|mini ?sk|jur[ií]dic|colecionador|colador|ca[çc]a.?bug|meu chat|code studio|guia|como (eu )?(uso|fa[çc]o|abro|ligo)|bot[aã]o|faxina|ollama|francisco|instal)/i;
+  function guiaPara(pergunta) {
+    if (!window.GuiaMaikon) return '';
+    if (SK.pref.get('aiGuia', false) || SOBRE_APPS.test(pergunta || '')) return '\n' + GuiaMaikon.texto + '\n';
+    return '\nGUIA: o usuário tem outros apps próprios (Meu Chat, SK Jurídico, Laboratório, Laboratório 2, Caça-Bug, Colecionador, Colador). Se ele perguntar de algum, o guia completo vem junto na próxima pergunta.\n';
+  }
+  function systemPrompt(pergunta) {
     if (ollamaNoCelular()) return systemPromptLeve();
     const base = 'Você é a assistente de programação do Mini SK. Responda SEMPRE em português do Brasil, de forma simples (o usuário não é programador).\n\n' +
       'REGRAS DE CONVERSA (obrigatórias):\n' +
@@ -344,7 +352,7 @@
       '- Quando ele pedir um plano, faça o plano primeiro e espere a ordem dele para construir.\n' +
       '- Puxe assunto no fim quando fizer sentido: sugira o próximo passo em uma frase.\n' +
       '- Comandos de terminal (npm install, npm run build…) vão num bloco ```bash: ele tem o botão ▶ Terminal, que roda no terminal ligado (PC, Termux ou Node). Para criar/alterar arquivos, use blocos com filepath: (viram "Aplicar").\n\n' + fichaAmbiente() +
-      (window.GuiaMaikon ? '\n' + GuiaMaikon.texto + '\n' : '');
+      guiaPara(pergunta);
     if (freeMode || !fs().project) return base + '\nEste é o chat livre (nenhum projeto aberto).';
     const P = fs().project;
     return base + '\n\nREGRAS PARA CÓDIGO:\n' +
@@ -397,7 +405,7 @@
   }
   /** Monta as mensagens respeitando o limite de tokens (corta as mais antigas). */
   function buildMessages(userText, imagens) {
-    const sys = systemPrompt();
+    const sys = systemPrompt(userText);
     const ctx = contextBlock();
     const last = { role: 'user', content: (ctx ? ctx + '\n\n---\nPEDIDO:\n' : '') + userText };
     if (imagens && imagens.length) last.imagens = imagens;
@@ -793,6 +801,7 @@
       '<label class="chk"><input type="checkbox" id="ai-c-diary" checked> Diário</label>' +
       '<label class="chk"><input type="checkbox" id="ai-c-log"> Erros do preview</label>' +
       '<label class="chk" title="As últimas linhas do terminal (PC, Termux ou Node) vão junto"><input type="checkbox" id="ai-c-term"' + (SK.pref.get('aiCtxTerm', true) ? ' checked' : '') + '> 💻 Terminal</label>' +
+      '<label class="chk" title="Liga = o guia de TODOS os seus apps vai em toda mensagem (mais caro). Desligado = só vai quando você pergunta de um app (mais barato)."><input type="checkbox" id="ai-c-guia"' + (SK.pref.get('aiGuia', false) ? ' checked' : '') + '> 🧭 Guia sempre</label>' +
       '<label class="chk" title="A IA roda SOZINHA os comandos seguros que ela pedir (RODAR:), lê o resultado e continua — até 8 seguidos. Comando que apaga ou muda coisas sempre pergunta antes."><input type="checkbox" id="ai-c-agente"' + (SK.pref.get('aiAgente', false) ? ' checked' : '') + '> 🤖 Agente</label>' +
       '</div>' +
       '<div class="ai-meter muted" id="ai-meter"></div>' +
@@ -825,6 +834,7 @@
     inputEl.addEventListener('input', SK.debounce(updateMeter, 300));
     SK.$('#ai-ctx', box).addEventListener('change', updateMeter);
     SK.$('#ai-c-term', box).addEventListener('change', (e) => SK.pref.set('aiCtxTerm', e.target.checked));
+    SK.$('#ai-c-guia', box).addEventListener('change', (e) => { SK.pref.set('aiGuia', e.target.checked); SK.toast(e.target.checked ? '🧭 Guia sempre ligado: a IA sabe de todos os seus apps em toda mensagem (gasta mais).' : '🧭 Guia econômico: só vai quando você pergunta de um app.'); });
     SK.$('#ai-c-agente', box).addEventListener('change', (e) => { SK.pref.set('aiAgente', e.target.checked); if (e.target.checked) SK.toast('🤖 Agente ligado: com o terminal ligado, a IA roda sozinha os comandos seguros, lê o resultado e continua. Comando que apaga sempre pergunta.'); });
     SK.$('#ai-limit', box).onchange = (e) => { ctxLimit = +e.target.value; SK.pref.set('aiCtx', ctxLimit); updateMeter(); };
     SK.$('#ai-free', box).onchange = (e) => { freeMode = e.target.checked; SK.pref.set('aiFree', freeMode); SK.$('#ai-ctx', box).hidden = freeMode; loadMemory(); renderLog(); };

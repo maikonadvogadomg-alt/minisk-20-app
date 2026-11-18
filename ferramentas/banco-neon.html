@@ -57,6 +57,13 @@
     <div class="linha"><select id="modelo" style="flex:1"></select><button class="p" id="b-criar">Criar</button></div>
     <p id="modelo-txt" class="mut"></p>
   </div>
+  <div class="card" id="ia-card">
+    <b>🤖 Pedir à IA (fale em português)</b>
+    <p class="mut">Diga o que você quer, do seu jeito. Ex.: <i>"quero uma tabela de clientes com nome, CPF e telefone"</i> ou <i>"acrescenta o campo data da audiência nos processos"</i>. A IA vê as tabelas que você já tem, monta o comando e explica antes. Você confere e toca em ▶ Rodar.</p>
+    <textarea id="ia-pedido" placeholder="O que você quer fazer no banco?" style="min-height:70px"></textarea>
+    <div class="linha"><button id="ia-voz" title="Falar em vez de escrever">🎤 Falar</button><button class="p" id="ia-montar">🤖 Montar o comando</button></div>
+    <div id="ia-resp"></div>
+  </div>
   <div class="card">
     <b>🧩 Criar uma tabela do meu jeito</b>
     <p class="mut">Pense numa planilha: a <b>tabela</b> é a planilha, cada <b>campo</b> é uma coluna, cada <b>linha</b> é um registro. Escreva o nome e os campos — eu monto o comando.</p>
@@ -204,15 +211,16 @@
   const MUDA = /\b(insert|update|delete|drop|alter|truncate|create|grant|revoke|rename|comment|vacuum|reindex)\b/i;
   async function rodar(texto, seguro) {
     const partes = texto.split(/;\s*(?:\n|$)/).map((s) => s.trim()).filter(Boolean);
-    if (!partes.length) return;
-    if (!seguro && partes.some((p) => MUDA.test(p)) && !(await confirmar(texto))) { $('#res').innerHTML = '<p class="mut" style="padding:8px">Cancelado.</p>'; return; }
+    if (!partes.length) return { ok: false, erro: 'comando vazio' };
+    if (!seguro && partes.some((p) => MUDA.test(p)) && !(await confirmar(texto))) { $('#res').innerHTML = '<p class="mut" style="padding:8px">Cancelado.</p>'; return { ok: false, cancelado: true }; }
     $('#res').innerHTML = '<p class="mut" style="padding:8px">⏳</p>';
     try {
       let ult = [];
       for (const p of partes) ult = await q(p);
       $('#res').innerHTML = Array.isArray(ult) && ult.length ? grade(ult) : '<p class="st ok" style="padding:8px">✅ Feito.</p>';
       if (partes.some((p) => MUDA.test(p))) listar();
-    } catch (e) { $('#res').innerHTML = '<p class="st er" style="padding:8px">' + E(traduzir(e)) + '</p>'; }
+      return { ok: true, linhas: ult };
+    } catch (e) { $('#res').innerHTML = '<p class="st er" style="padding:8px">' + E(traduzir(e)) + '</p>'; return { ok: false, erro: String((e && e.message) || e) }; }
   }
   $('#b-rodar').onclick = () => rodar($('#sql').value);
 
@@ -243,6 +251,85 @@
     await rodar('alter table ' + nomeSeguro(t) + ' add column if not exists ' + c + ' ' + $('#nc-tipo').value, true);
   };
   $('#b-criar').onclick = () => rodar(MODELOS[$('#modelo').value][1], true); // "if not exists": não apaga nada
+
+  // ---------- 🤖 PEDIR À IA (17/11) ----------
+  // Usa a IA do app onde esta ferramenta está aberta (Mini SK, SK Jurídico). Sem IA por perto: copia o pedido.
+  const SIS = 'Você é o ajudante de BANCO DE DADOS (PostgreSQL, no Neon) de um advogado que NÃO sabe programar e NÃO lê inglês.\n' +
+    'Responda SOMENTE com um JSON, sem nada antes ou depois, neste formato:\n' +
+    '{"explicacao": "em português bem simples, em 1 a 4 frases curtas: o que o comando faz", "sql": "o comando PostgreSQL (pode ter vários, separados por ; e quebra de linha)", "perigo": false}\n' +
+    'Regras:\n- "perigo": true se o comando apaga, zera ou troca dados (drop, delete, truncate, update, alter ... drop/rename/type).\n' +
+    '- Nomes de tabelas e campos em português, minúsculos, sem acento, com _ (ex.: data_audiencia).\n' +
+    '- Tabela nova: sempre "create table if not exists", com "id bigserial primary key" e "criado timestamptz not null default now()".\n' +
+    '- Campo novo: "alter table ... add column if not exists ...".\n- Para consultar, use select com limit 50.\n' +
+    '- Só altere tabelas que existem na lista abaixo. Se o pedido não der para fazer ou não fizer sentido, devolva "sql": "" e explique o porquê.\n' +
+    '- Nunca mexa em tabelas do sistema (pg_*, information_schema) nem em senhas/usuários do banco.\n' +
+    '- A tabela mc_itens é do Meu Chat e do SK Jurídico: não apague nem mude o formato dela.';
+  async function esquema() {
+    try {
+      const r = await q("select table_name, column_name, data_type from information_schema.columns where table_schema = 'public' order by table_name, ordinal_position");
+      const t = {}; r.forEach((x) => { (t[x.table_name] = t[x.table_name] || []).push(x.column_name + ' ' + x.data_type); });
+      const l = Object.entries(t).map(([k, v]) => '- ' + k + ' (' + v.join(', ') + ')');
+      return l.length ? l.join('\n') : '(o banco ainda não tem tabelas)';
+    } catch (e) { return '(não consegui ler as tabelas)'; }
+  }
+  function iaDoApp() {
+    let P = null; try { P = window.parent && window.parent !== window ? window.parent : null; } catch (e) { P = null; }
+    try { if (P && P.SK && P.SK.ai && typeof P.SK.ai.chat === 'function') return { nome: 'IA do Mini SK', fazer: (sis, msg) => P.SK.ai.chat([{ role: 'user', content: msg }], sis, () => {}) }; } catch (e) {}
+    try { if (P && P.J && P.J.ia && typeof P.J.ia.gerar === 'function') return { nome: 'IA do SK Jurídico', fazer: (sis, msg) => P.J.ia.gerar({ mensagens: [{ role: 'user', content: msg }], sistema: sis }) }; } catch (e) {}
+    return null;
+  }
+  function lerJSON(t) {
+    t = String(t || '').replace(/```(?:json)?/gi, '');
+    const a = t.indexOf('{'), b = t.lastIndexOf('}');
+    if (a < 0 || b < a) throw new Error('A IA não respondeu no formato certo. Tente de novo.');
+    const j = JSON.parse(t.slice(a, b + 1));
+    return { explicacao: String(j.explicacao || ''), sql: String(j.sql || '').trim(), perigo: !!j.perigo };
+  }
+  const PERIGOSO = /\b(drop|delete|truncate|update)\b|\balter\s+table\b[\s\S]*\b(drop|rename|type)\b/i;
+  let iaUltimo = null;
+  async function montar(pedido, erroAnterior) {
+    const box = $('#ia-resp');
+    if (!sql) { box.innerHTML = '<p class="st er">Conecte primeiro (🔌 lá em cima).</p>'; return; }
+    pedido = String(pedido || '').trim(); if (!pedido) { box.innerHTML = '<p class="st er">Escreva (ou fale) o que você quer.</p>'; return; }
+    const tabelas = await esquema();
+    let msg = 'Tabelas que já existem no banco:\n' + tabelas + '\n\nPedido: ' + pedido;
+    if (erroAnterior) msg += '\n\nO comando anterior deu ERRO. Comando:\n' + erroAnterior.sql + '\nErro do banco:\n' + erroAnterior.erro + '\nCorrija.';
+    const ia = iaDoApp();
+    if (!ia) {
+      box.innerHTML = '<p class="mut">Aqui não tem IA ligada. Toque em <b>📋 Copiar o pedido</b>, cole na sua IA (Meu Chat, Gemini…) e cole a resposta dela no ▶ Comando (SQL) lá embaixo.</p><div class="linha"><button class="p" id="ia-copiar">📋 Copiar o pedido</button></div>';
+      $('#ia-copiar').onclick = async () => { try { await navigator.clipboard.writeText(SIS + '\n\n' + msg); $('#ia-copiar').textContent = '✅ Copiado'; } catch (e) { prompt('Copie:', SIS + '\n\n' + msg); } };
+      return;
+    }
+    box.innerHTML = '<p class="mut">⏳ A ' + E(ia.nome) + ' está montando…</p>';
+    try {
+      const r = lerJSON(await ia.fazer(SIS, msg));
+      const perigo = r.perigo || PERIGOSO.test(r.sql);
+      iaUltimo = { pedido, sql: r.sql, perigo };
+      box.innerHTML = '<div style="background:var(--bg,#f3f3f3);border-radius:10px;padding:10px;margin-top:8px"><p style="margin:0 0 6px"><b>🧠 O que vai acontecer:</b> ' + E(r.explicacao || '(sem explicação)') + '</p>' +
+        (r.sql ? (perigo ? '<p class="st er" style="margin:6px 0">✋ Este comando APAGA ou MUDA dados: vai pedir CONFIRMO.</p>' : '<p class="st ok" style="margin:6px 0">🛡 Não apaga nada.</p>') +
+          '<textarea id="ia-sql" spellcheck="false" autocapitalize="off" style="min-height:80px">' + E(r.sql) + '</textarea>' +
+          '<div class="linha"><button class="p" id="ia-rodar">▶ Rodar</button><button id="ia-outra">🔁 Pedir de outro jeito</button></div>' : '<p class="mut">A IA não montou comando (veja a explicação).</p>') +
+        '<p id="ia-final" style="margin:6px 0 0"></p></div>';
+      const bR = $('#ia-rodar'); if (bR) bR.onclick = async () => {
+        const texto = $('#ia-sql').value; $('#ia-final').textContent = '⏳ Rodando…';
+        const res = await rodar(texto, !(iaUltimo.perigo || PERIGOSO.test(texto)));
+        if (res && res.ok) { $('#ia-final').innerHTML = '<span class="st ok">✅ Deu certo!</span> ' + (Array.isArray(res.linhas) && res.linhas.length ? 'O resultado está lá embaixo, no ▶ Comando.' : 'A lista de tabelas já foi atualizada.'); }
+        else if (res && res.cancelado) { $('#ia-final').textContent = 'Cancelado. Nada mudou.'; }
+        else { $('#ia-final').innerHTML = '<span class="st er">❌ Deu errado:</span> ' + E(traduzir(res && res.erro)) + ' <button id="ia-corrigir">🤖 Pedir para a IA corrigir</button>'; $('#ia-corrigir').onclick = () => montar(pedido, { sql: texto, erro: res && res.erro }); }
+      };
+      const bO = $('#ia-outra'); if (bO) bO.onclick = () => montar(pedido + '\n(Faça de outro jeito, mais simples.)');
+    } catch (e) { box.innerHTML = '<p class="st er">⚠ ' + E(e.message) + '</p>'; }
+  }
+  $('#ia-montar').onclick = () => montar($('#ia-pedido').value);
+  // 🎤 falar (o reconhecimento de voz do próprio aparelho, em português)
+  $('#ia-voz').onclick = () => {
+    const R = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!R) { alert('Este aparelho não deixa falar aqui. Use o 🎤 do teclado.'); return; }
+    const r = new R(); r.lang = 'pt-BR'; r.interimResults = false; const b = $('#ia-voz'); b.textContent = '🔴 Ouvindo…';
+    r.onresult = (e) => { const t = e.results[0][0].transcript; const a = $('#ia-pedido'); a.value = (a.value ? a.value + ' ' : '') + t; };
+    r.onend = () => { b.textContent = '🎤 Falar'; }; r.onerror = () => { b.textContent = '🎤 Falar'; };
+    try { r.start(); } catch (e) { b.textContent = '🎤 Falar'; }
+  };
 })();
 </script>
 </body>

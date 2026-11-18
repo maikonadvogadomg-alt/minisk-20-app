@@ -26,7 +26,7 @@
   <header id="top">
     <button class="icon-btn" id="btn-tree" title="Arquivos (Ctrl+B)" aria-label="Mostrar ou esconder arquivos">☰</button>
     <button class="proj-name" id="proj-name" title="Trocar de projeto">Mini SK</button>
-    <span class="versao-chip" id="versao-chip" title="Versão do Mini SK">v17/11-A</span>
+    <span class="versao-chip" id="versao-chip" title="Versão do Mini SK">v18/11-B</span>
     <span class="save-ind" id="save-ind" aria-live="polite"></span>
     <button class="icon-btn rolar" id="top-esq" title="Ver os botões da esquerda" aria-label="Rolar para a esquerda">◀</button>
     <nav class="top-tools" aria-label="Painéis">
@@ -91,6 +91,7 @@
   <script src="js/80-ai.js"></script>
   <script src="js/80b-web.js"></script>
   <script src="js/81-gasto.js"></script>
+  <script src="js/81b-pronto.js"></script>
   <script src="js/83-voz.js"></script>
   <script src="js/84-ponte.js"></script>
   <script src="js/85-checkpoints.js"></script>
@@ -143,5 +144,12 @@
 <script src="js/98c-montar.js"></script>
   <script src="js/87-banco.js"></script>
   <script src="js/99-app.js"></script>
+<script>window.TEMA_APP = { id: 'minisk', barra: '#top', padrao: 'escuro', classe: 'icon-btn', antesDe: '#top-dir', cores: {
+  escuro: null,
+  claro: { '--bg': '#f5f7fb', '--bg2': '#ffffff', '--bg3': '#eef2f8', '--line': '#d2dae7', '--line2': '#b9c4d6', '--tx': '#17202f', '--mut': '#58657c', '--acc': '#2563eb', '--acc2': '#1d4ed8', '--ok': '#15803d', '--warn': '#a15c00', '--bad': '#c0262d' },
+  contraste: { '--bg': '#000000', '--bg2': '#0a0a0a', '--bg3': '#151515', '--line': '#7a7a7a', '--line2': '#a0a0a0', '--tx': '#ffffff', '--mut': '#e0e0e0', '--acc': '#5aaeff', '--acc2': '#2f7fe0', '--ok': '#4dff8f', '--warn': '#ffd33d', '--bad': '#ff7070' },
+  papel: { '--bg': '#f2e9d6', '--bg2': '#fbf5e7', '--bg3': '#eee1c4', '--line': '#d6c5a2', '--line2': '#c2ad84', '--tx': '#2a2115', '--mut': '#67563c', '--acc': '#8a5514', '--acc2': '#6f430e', '--ok': '#3d6a28', '--warn': '#9a5600', '--bad': '#9b2c2c' } },
+  extra: (function () { const c = '.t-com{color:#6a737d!important}.t-str{color:#22863a!important}.t-num{color:#b05a00!important}.t-kw{color:#6f42c1!important}.t-lit{color:#c2185b!important}.t-fn{color:#005cc5!important}.t-tag{color:#c62828!important}.t-attr{color:#8a5a00!important}.ed-gutter{color:#7a869a!important}.pill{background:#e3ebfa!important;color:#1d4ed8!important}.btn.danger{background:#fde8ea!important;border-color:#e3a2aa!important;color:#9b1c2c!important}.l-html{color:#c2410c!important}.l-css{color:#1d4ed8!important}.l-js{color:#a16207!important}.l-json{color:#4d7c0f!important}.l-py{color:#1e40af!important}.l-md,.l-text{color:#475569!important}.l-yaml{color:#b91c1c!important}.l-sh{color:#15803d!important}.l-sql{color:#7e22ce!important}.ic-dir{color:#a16207!important}.pop-item.danger{color:#b91c1c!important}'; return { claro: c, papel: c }; })() };</script>
+<script src="js/tema.js"></script>
 </body>
 </html>

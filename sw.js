@@ -7,7 +7,7 @@
      autorização especial (atrapalha menos que o "require-corp").
    - Sempre busca a versão nova na internet primeiro; a cópia guardada só é usada sem internet. */
 const LACRE = new URL(self.location.href).searchParams.get('lacre') === '1';
-const CACHE = 'minisk-v1711a';
+const CACHE = 'minisk-v1811b';
 
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', (e) => e.waitUntil((async () => {
@@ -42,3 +42,5 @@ self.addEventListener('fetch', (e) => {
     }
   })());
 });
+
+self.addEventListener('notificationclick', (e) => { e.notification.close(); e.waitUntil(self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((l) => { for (const c of l) { if ('focus' in c) return c.focus(); } return self.clients.openWindow('./'); })); });
